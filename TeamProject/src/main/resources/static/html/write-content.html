@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시글</title>
+    <link rel="stylesheet" href="public/styles/share.css" />
+    <link rel="stylesheet" href="public/styles/write-content.css" />
+    <link rel="stylesheet" href="public/styles/media.css" />
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="post.css">
+    <link rel="stylesheet" href="aside.css">
+  </head>
+  <body>
+     <nav class="navbar">
+            <div>
+                <a href="index.html">홈페이지 이름</a>
+            </div>
+            <div>
+                <a href="program.html">프로그램</a>
+            </div>
+            <div>
+                <a href="messageBoard.html">자유게시판</a>
+            </div>
+            <div>
+                <a href="sportingGoods.html">운동기구</a>
+            </div>
+            <div>
+                <a href="login.html">로그인</a>
+            </div>
+	 </nav>
+
+    <div class="main-container">
+      <div class="main-title">
+        <h1>자유게시판</h1>
+      </div>
+      <div class="board-view-container">
+        <div class="board-view" id="board-view-content">
+          <div class="board-title"></div>
+          <div class="board-info">
+            <div class="board-info-lists">
+              <div class="board-info-list">글 번호</div>
+              <div class="board-info-num"></div>
+            </div>
+            <div class="board-info-lists">
+              <div class="board-info-list">글쓴이</div>
+              <div class="board-info-writer"></div>
+            </div>
+            <div class="board-info-lists">
+              <div class="board-info-list">작성일</div>
+              <div class="board-info-date"></div>
+            </div>
+            <div class="board-info-lists">
+              <div class="board-info-list">조회</div>
+              <div class="board-info-views"></div>
+            </div>
+          </div>
+          <div class="board-content"></div>
+        </div>
+        <div class="btn-wrap" id="btn-wrap-edit">
+          <a href="messageBoard.html" class="btn-list">목록</a>
+          <button id="btn-editpage">수정</button>
+          <button id="btn-delete">삭제</button>
+          <!-- <dialog id="modal-dialog">
+            <button id="btn-off">X</button>
+            <p>비밀번호를 입력하세요.</p>
+            <form>
+              <input id="delete-password-check" type="password" />
+            </form>
+            <button type="submit" id="btn-confirm">완료</button>
+          </dialog> -->
+        </div>
+      </div>
+    </div>
+    <script src="public/scripts/write.js" defer></script>
+  </body>
+</html>
+
+<!-- <div class="board-container">
+  <div class="board-title">
+    
+  </div>
+
+  <div class="post-detail">
+    <div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+</div> -->
