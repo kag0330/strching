@@ -3,137 +3,356 @@
     <head>
         <meta charset="utf-8">
         <title>메인페이지</title>
-        <link rel="stylesheet" href="../css/navbar.css">
-        <link rel="stylesheet" href="slide.css">
-        <style>
-            .main{
-                text-align: center;
-            }
-            #item{
-                display: flex;
-            }
-            #youtube{
-                display: flex;
-            }
-            
-        </style>
+        <link rel="stylesheet" href="/css/navbar.css">
+        <link rel="stylesheet" href="/css/slide.css">
+        <link rel="stylesheet" href="/css/footer.css">
+        <link rel="stylesheet" href="/css/index.css">
+        
+      <!-- Link Swiper's CSS -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+  />
     </head>
     <body>
-        <nav class="navbar">
-            <div>
-                <a href="index.html">홈페이지 이름</a>
-            </div>
-            <div>
-                <a href="program.html">프로그램</a>
-            </div>
-            <div>
-                <a href="messageBoard.html">자유게시판</a>
-            </div>
-            <div>
-                <a href="sportingGoods.html">운동기구</a>
-            </div>
-            <div>
-                <a href="login.html">로그인</a>
-            </div>
-
-        </nav>
-        
-        <div class="main">
-            <img src="stretching.jpg" width="100%" >
-        </div>
+        <header>
+            <nav class="navbar">
+                <div>
+                    <a href="index.html">홈페이지 이름</a>
+                </div>
+                <div>
+                    <a href="program.html">프로그램</a>
+                </div>
+                <div>
+                    <a href="messageBoard.html">자유게시판</a>
+                </div>
+                <div>
+                    <a href="sportingGoods.html">운동기구</a>
+                </div>
+                <div>
+                    <a href="signin.html">로그인</a>
+                </div>
+    
+            </nav>    
+        </header>
         <section>
-            <div id="content_box">
-                <div class="box">
-                    <div>
-                        <h3>최신영상</h3>
-                    </div>
-                    <div id="youtube">
-                        <span class="you1">
-                            <iframe width="350" height="250" src="https://www.youtube.com/embed/nOGT4lXlSHw?si=g2eN0h7FYctSGFMe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            <br><a href="" id="program">전신스트레칭</a>
-                        </span>      
-                        <span class="you1">
-                            <iframe width="350" height="250" src="https://www.youtube.com/embed/jJJiR7nNeqQ?si=q3PzqwmV-etAqbqt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            <br><a href="" id="program">허리스트레칭</a>
-                        </span>
-                        <span class="you1">
-                            <iframe width="350" height="250" src="https://www.youtube.com/embed/50WCSpZtdmA?si=ac0ey_5-X6Iewabr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            <br><a href="" id="program">아침스트레칭</a>
-                        </span>
-                        <span class="you1">
-                            <iframe width="350" height="250" src="https://www.youtube.com/embed/ouRBXs-air8?si=qTD9YX9JPMMhJndV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            <br><a href="" id="program">목 마사지</a>
-                        </span>    
+            <article>
+                <div2 class="main">
+                    <img src="images/stretching.jpg" alt="스트레칭 사진">
+                </div>
+            </article>
+            <article>
+                <div class="content_box">
+                    <div class="box">
+                        <div>
+                            <h3>최신영상</h3>
+                        </div>
+                        <div class="recently-youtube-swipe">
+                            <div class="swiper-wrapper">
+                                <div id="youtube" class="swiper-slide">
+                                    <span class="you1">
+                                        <iframe width="250" height="150" src="https://www.youtube.com/embed/nOGT4lXlSHw?si=g2eN0h7FYctSGFMe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </span>      
+                                    <span class="you1">
+                                        <iframe width="250" height="150" src="https://www.youtube.com/embed/jJJiR7nNeqQ?si=q3PzqwmV-etAqbqt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </span>
+                                    <span class="you1">
+                                        <iframe width="250" height="150" src="https://www.youtube.com/embed/50WCSpZtdmA?si=ac0ey_5-X6Iewabr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </span>
+                                    <span class="you1">
+                                        <iframe width="250" height="150" src="https://www.youtube.com/embed/ouRBXs-air8?si=qTD9YX9JPMMhJndV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </span>    
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="you2">
+                                        <iframe width="250" height="150" src="https://www.youtube.com/embed/RGfinfaJojU?si=Mw5bZBfejevxt693" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </span>
+                                    <span class="you2">
+                                        <iframe width="250" height="150" src="https://www.youtube.com/embed/mEt_BSsdO38?si=sjsBy-k4X293zyqz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </span>
+                                    <span class="you2">
+                                        <iframe width="250" height="150" src="https://www.youtube.com/embed/oCSrgp_Fksw?si=wJWmxZfZS98a102t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </span>
+                                    <span class="you2">
+                                        <iframe width="250" height="150" src="https://www.youtube.com/embed/x8lFFXFuZ9U?si=Nzjntkeu62IM81hT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </span>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="you3">
+                                        <iframe width="250" height="150" src="https://www.youtube.com/embed/8VtkpMGw0hw?si=0M0gSAepqPBqx_3i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </span>
+                                    <span class="you3">
+                                        <iframe width="250" height="150" src="https://www.youtube.com/embed/4TwQwVFLi4Q?si=uiQhQwW8J22LhYcp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </span>
+                                    <span class="you3">
+                                        <iframe width="250" height="150" src="https://www.youtube.com/embed/ojWHzxUzEVk?si=EqS-aTi2jXf0kDp9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </span>
+                                    <span class="you3">
+                                        <iframe width="250" height="150" src="https://www.youtube.com/embed/yyjOhsNEqtE?si=JjjKb16NJ4tqeF_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section>
-            <div id="content_box">
-                <div class="box">
-                    <div>
-                        <h3>인기영상</h3>
-                    </div>
-                    <div id="youtube">
-                        <span class="you1">
-                            <iframe width="350" height="250" src="https://www.youtube.com/embed/nOGT4lXlSHw?si=g2eN0h7FYctSGFMe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            <br><a href="" id="program">전신스트레칭</a>
-                        </span>      
-                        <span class="you1">
-                            <iframe width="350" height="250" src="https://www.youtube.com/embed/jJJiR7nNeqQ?si=q3PzqwmV-etAqbqt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            <br><a href="" id="program">허리스트레칭</a>
-                        </span>
-                        <span class="you1">
-                            <iframe width="350" height="250" src="https://www.youtube.com/embed/50WCSpZtdmA?si=ac0ey_5-X6Iewabr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            <br><a href="" id="program">아침스트레칭</a>
-                        </span>
-                        <span class="you1">
-                            <iframe width="350" height="250" src="https://www.youtube.com/embed/ouRBXs-air8?si=qTD9YX9JPMMhJndV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            <br><a href="" id="program">목 마사지</a>
-                        </span>    
+            </article>
+            <article>
+                <div class="content_box">
+                    <div class="box">
+                        <div>
+                            <h3>인기영상</h3>
+                        </div>
+                        <div class="best-youtube-swipe">
+                            <div class="swiper-wrapper">
+                                <div id="youtube" class="swiper-slide">
+                                    <span class="you1">
+                                        <iframe width="250" height="150" src="https://www.youtube.com/embed/RpAH7ts--eY?si=MFLr9a3x-5yWRvHf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>   
+                                    </span>      
+                                    <span class="you1">
+                                        <iframe width="250" height="150" src="https://www.youtube.com/embed/jJJiR7nNeqQ?si=q3PzqwmV-etAqbqt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </span>
+                                    <span class="you1">
+                                        <iframe width="250" height="150" src="https://www.youtube.com/embed/D3yExRi7EME?si=6BGQzvx1eLu5C4Wu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </span>
+                                    <span class="you1">
+                                        <iframe width="250" height="150" src="https://www.youtube.com/embed/CkSLkHSdJjA?si=wcDosKsMpyd_Opu7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </span>    
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="you2">
+                                        <iframe width="250" height="150" src="https://www.youtube.com/embed/bOWoNq2nUgg?si=WbOuI49MAsDp8HP7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </span>
+                                    <span class="you2">
+                                        <iframe width="250" height="150" src="https://www.youtube.com/embed/tZEZNsuDkLY?si=5RTC30KNuppPzhQU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </span>
+                                    <span class="you2">
+                                        <iframe width="250" height="150" src="https://www.youtube.com/embed/4TwQwVFLi4Q?si=01YmqVbVZ6hW7TOH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </span>
+                                    <span class="you2">
+                                        <iframe width="250" height="150" src="https://www.youtube.com/embed/buszs1Mis84?si=0cBMhmo4aYWfL4VI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </span>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="you3">
+                                        <iframe width="250" height="150" src="https://www.youtube.com/embed/zRaPfQUaSUY?si=e5sQD6nfr6nCrn_P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </span>
+                                    <span class="you3">
+                                        <iframe width="250" height="150" src="https://www.youtube.com/embed/BxlFN85QSUQ?si=RKni2zJUYgEbdP-5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </span>
+                                    <span class="you3">
+                                        <iframe width="250" height="150" src="https://www.youtube.com/embed/yyjOhsNEqtE?si=sQGpNx9MKqrOSFpH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </span>
+                                    <span class="you3">
+                                        <iframe width="250" height="150" src="https://www.youtube.com/embed/7CUY_H-Vy34?si=Ek3KO0srifHL1U6O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section>
-            <div id="content_box">
+                </article>
+            <article>
+                    <div class="content_box">
+                        <div class="box">
+                            <div>
+                                <h3>최신상품</h3>
+                            </div>
+                            <div class="recently-item-swipe">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide item-list">
+                                         <span class="recently-item">
+                                            <div class="r-item"><a href=""><img src="images/foam6.jpg" alt="폼롤러 사진"></a></div>
+                                            <div>바디맵 폼롤러</div>
+                                            <div>12,000원</div>
+                                            <div>평점<span>4.8</span>·리뷰<span>6,570</span></div>
+                                        </span>                                            
+                                        <span  class="recently-item">
+                                            <div class="r-item"><a href=""><img src="images/foam7.jpg" alt="폼롤러 사진"></a></div>
+                                            <div>이고진 폼롤러</div>
+                                            <div>15,000원</div>
+                                            <div>평점<span>4.8</span>·리뷰<span>8,016</span></div>
+                                        </span>
+                                        <span  class="recently-item">
+                                            <div class="r-item"><a href=""><img src="images/band3.jpg" alt="밴드 사진"></a></div>
+                                            <div>이고진 밴드</div>
+                                            <div>2,100원</div>
+                                            <div>평점<span>4.7</span>·리뷰<span>8,605</span></div>
+                                        </span>
+                                        <span  class="recently-item">
+                                            <div class="r-item"><a href=""><img src="images/band4.jpg" alt="밴드 사진"></a></div>
+                                            <div>테라 밴드</div>
+                                            <div>9,900원</div>
+                                            <div>평점<span>4.7</span>·리뷰<span>3,866</span></div>
+                                        </span>
+                                        
+                                    </div>   
+                                    <div class="swiper-slide item-list">
+                                        <span  class="recently-item">
+                                           <div class="r-item"><a href=""><img src="images/foam2.jpg" alt="폼롤러 사진"></a></div>
+                                           <div>멜킨 폼롤러</div>
+                                           <div>20,900원</div>
+                                           <div>평점<span>4.8</span>·리뷰<span>7,717</span></div>
+                                       </span>                                            
+                                       <span  class="recently-item">
+                                           <div class="r-item"><a href=""><img src="images/foam1.jpg" alt="폼롤러 사진"></a></div>
+                                           <div>밸런시스 폼롤러</div>
+                                           <div>27,900원</div>
+                                           <div>평점<span>4.8</span>·리뷰<span>13,939</span></div>
+                                       </span>
+                                       <span  class="recently-item">
+                                           <div class="r-item"><a href=""><img src="images/band6.jpg" alt="밴드 사진"></a></div>
+                                           <div>아이언빅 밴드</div>
+                                           <div>2,300원</div>
+                                           <div>평점<span>4.8</span>·리뷰<span>1,744</span></div>
+                                       </span>
+                                       <span  class="recently-item">
+                                           <div class="r-item"><a href=""><img src="images/band5.jpg" alt="밴드 사진"></a></div>
+                                           <div>아이언빅 밴드</div>
+                                           <div>14,500원</div>
+                                           <div>평점<span>4.8</span>·리뷰<span>3,962</span></div>
+                                       </span>
+                                       
+                                   </div> 
+                                   <div class="swiper-slide item-list">
+                                    <span  class="recently-item">
+                                       <div class="r-item"><a href=""><img src="images/foam2.jpg" alt="폼롤러 사진"></a></div>
+                                       <div>멜킨 폼롤러</div>
+                                       <div>20,900원</div>
+                                       <div>평점<span>4.8</span>·리뷰<span>7,717</span></div>
+                                   </span>                                            
+                                   <span  class="recently-item">
+                                       <div class="r-item"><a href=""><img src="images/foam5.jpg" alt="폼롤러 사진"></a></div>
+                                       <div>트라택 폼롤러</div>
+                                       <div>20,900원</div>
+                                       <div>평점<span>4.8</span>·리뷰<span>7,924</span></div>
+                                   </span>
+                                   <span  class="recently-item">
+                                       <div class="r-item"><a href=""><img src="images/band2.jpg" alt="밴드 사진"></a></div>
+                                       <div>고무나라 밴드</div>
+                                       <div>1,800원</div>
+                                       <div>평점<span>4.7</span>·리뷰<span>22,472</span></div>
+                                   </span>
+                                   <span  class="recently-item">
+                                       <div class="r-item"><a href=""><img src="images/ball1.jpg" alt="밴드 사진"></a></div>
+                                       <div>와두 마사지 볼</div>
+                                       <div>5,500원</div>
+                                       <div>평점<span>4.8</span>·리뷰<span>1,28</span></div>
+                                   </span>
+                                   
+                            </div>  
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div> 
+                    </div>
+                </div>  
+            </article>
+            <article>
+            <div class="content_box">
                 <div class="box">
                     <div>
                         <h3>인기상품</h3>
                     </div>   
-                    <div id="item">
-                        <div class="item1"><a href=""><img src="band1.jpg"></a>
-                            <div class="item1">멜킨 라텍스 밴드</div>
-                            <div>3,800원</div>
-                            <div>평점<span>4.8</span>·리뷰<span>30,735</span></div>
-                        </div>
-                        <div>
-                            <div class="item1"><a href=""></a><img src="band2.jpg"></a></div>
-                            <div>고무나라 밴드</div>
-                            <div>1,800원</div>
-                            <div>평점<span>4.7</span>·리뷰<span>22,472</span></div>
-                        </div>
-                        <div>
-                            <div class="item1"><a href=""><img src="band3.jpg"></a></div>
-                            <div>이고진 밴드</div>
-                            <div>2,100원</div>
-                            <div>평점<span>4.7</span>·리뷰<span>8,605</span></div>
-                        </div>
-                        <div>
-                            <div class="item1"><a href=""><img src="band4.jpg"></a></div>
-                            <div>테라 밴드</div>
-                            <div>9,900원</div>
-                            <div>평점<span>4.7</span>·리뷰<span>3,866</span></div>
-                        </div>
-                       <div>
-                            <div class="item1"><a href=""><img src="band5.jpg"></a></div>
-                            <div>아이언빅 밴드</div>
-                            <div>14,500원</div>
-                            <div>평점<span>4.8</span>·리뷰<span>3,962</span></div>
-                       </div>
-                       </div>
+                    <div class="best-item-swipe">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide item-list">
+                                <div class="b-item"><a href=""><img src="images/band1.jpg"></a>
+                                    <div class="b-item">멜킨 라텍스 밴드</div>
+                                    <div>3,800원</div>
+                                    <div>평점<span>4.8</span>·리뷰<span>30,735</span></div>
+                                </div>
+                                <div>
+                                    <div class="b-item"><a href=""><img src="images/foam5.jpg" alt="폼롤러 사진"></a></div>
+                                    <div>트라택 폼롤러</div>
+                                    <div>20,900원</div>
+                                    <div>평점<span>4.8</span>·리뷰<span>7,924</span></div>
+                                </div>
+                                <div>
+                                    <div class="b-item"><a href=""><img src="images/band3.jpg"></a></div>
+                                    <div>이고진 밴드</div>
+                                    <div>2,100원</div>
+                                    <div>평점<span>4.7</span>·리뷰<span>8,605</span></div>
+                                </div>
+                                <div>
+                                    <div class="b-item"><a href=""><img src="images/ball6.jpg"  alt="마사지 볼 사진"></a></div>
+                                    <div>레토 마사지 볼</div>
+                                    <div>3,900원</div>
+                                    <div>평점<span>4.8</span>·리뷰<span>350</span></div>
+                                </div>
+                            </div> 
+                            <div class="swiper-slide item-list">
+                                <div class="b-item"><a href=""><img src="images/foam4.jpg"></a>
+                                    <div class="b-item">비에이 폼롤러</div>
+                                    <div>12,900원</div>
+                                    <div>평점<span>4.8</span>·리뷰<span>2,026</span></div>
+                                </div>
+                                <div>
+                                    <div class="b-item"><a href=""><img src="images/ball3.jpg" alt="폼롤러 사진"></a></div>
+                                    <div>아리프 마사지 볼</div>
+                                    <div>8,400원</div>
+                                    <div>평점<span>4.8</span>·리뷰<span>782</span></div>
+                                </div>
+                                <div>
+                                    <div class="b-item"><a href=""><img src="images/band7.jpg"></a></div>
+                                    <div>프로스펙스 밴드</div>
+                                    <div>2,100원</div>
+                                    <div>평점<span>4.9</span>·리뷰<span>567</span></div>
+                                </div>
+                                <div>
+                                    <div class="b-item"><a href=""><img src="images/foam6.jpg"  alt="마사지 볼 사진"></a></div>
+                                    <div>바디맵 폼롤러</div>
+                                    <div>12,000원</div>
+                                    <div>평점<span>4.8</span>·리뷰<span>6,570</span></div>
+                                </div>
+                            </div> 
+                            <div class="swiper-slide item-list">
+                                <div class="b-item"><a href=""><img src="images/ball1.jpg"></a>
+                                    <div class="b-item">와두 마사지 볼</div>
+                                    <div>5,500원</div>
+                                    <div>평점<span>4.8</span>·리뷰<span>1,248</span></div>
+                                </div>
+                                <div>
+                                    <div class="b-item"><a href=""><img src="images/ball4.jpg" alt="폼롤러 사진"></a></div>
+                                    <div>안다르 마사지 볼</div>
+                                    <div>9,900원</div>
+                                    <div>평점<span>4.7</span>·리뷰<span>8,514</span></div>
+                                </div>
+                                <div>
+                                    <div class="b-item"><a href=""><img src="images/band5.jpg"></a></div>
+                                    <div>아이언빅 밴드</div>
+                                    <div>14,500원</div>
+                                    <div>평점<span>4.8</span>·리뷰<span>3,962</span></div>
+                                </div>
+                                <div>
+                                    <div class="b-item"><a href=""><img src="images/foam3.jpg"  alt="마사지 볼 사진"></a></div>
+                                    <div>뉴포츠 폼롤러</div>
+                                    <div>12,900원</div>
+                                    <div>평점<span>4.7</span>·리뷰<span>281</span></div>
+                                </div>
+                            </div>    
+                        </div>  
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div> 
+                    </div>      
+            </article>
         </section>
-       
-      
+        <footer>
+            <div class="footer">
+                <ul>
+                    <li>유한대학교 </li>
+                    <li>컴퓨터소프트웨어공학과</li>
+                    <li>컴퓨터소프트웨어전공 </li>
+                    <li>3조</li>
+                    <li>02-2610-0768</li>
+                </ul>
+            </div>
+        </footer>
     </body>
+
+      <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="js/index.js"></script>
 </html>

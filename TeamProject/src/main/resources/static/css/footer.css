@@ -1,0 +1,11 @@
+footer{
+    
+    margin-bottom: 30px;
+    text-align: center;
+    border-top: 1.5px solid powderblue;
+}
+.footer li{
+    list-style: none;
+    display: inline;
+    margin-left: 30px;
+}
