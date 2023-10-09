@@ -3,115 +3,106 @@
     <head>
         <meta charset="utf-8">
         <title>운동기구-마사지 볼</title>
-        <link rel="stylesheet" href="navbar.css">
-        <link rel="stylesheet" href="post.css">
-        <link rel="stylesheet" href="aside.css">
-        <link rel="stylesheet" href="goods.css">
+        <link rel="stylesheet" href="/TeamProject/src/main/resources/static/css/navbar.css">
+        <link rel="stylesheet" href="/TeamProject/src/main/resources/static/css/post.css">
+        <link rel="stylesheet" href="/TeamProject/src/main/resources/static/css/aside.css">
+        <link rel="stylesheet" href="/TeamProject/src/main/resources/static/css/goods.css">
+        <link rel="stylesheet" href="/TeamProject/src/main/resources/static/css/footer.css">
+        <link rel="stylesheet" href="/TeamProject/src/main/resources/static/css/search.css">
+        <link rel="stylesheet" href="/TeamProject/src/main/resources/static/css/videoList.css">
     </head>
     <body>
-        <nav class="navbar">
-            <div>
-                <a href="index.html">홈페이지 이름</a>
-            </div>
-            <div>
-                <a href="program.html">프로그램</a>
-            </div>
-            <div>
-                <a href="messageBoard.html">자유게시판</a>
-            </div>
-            <div>
-                <a href="sportingGoods.html">운동기구</a>
-            </div>
-            <div>
-                <a href="signin.html">로그인</a>
-            </div>
-
-        </nav>
-        <div id="grid">
-            <div class="aside">
-                <div>
-                    <h1><a href="sportingGoods.html" id="program">운동기구</a></h1>
-                </div>
-                <div >
-                    <ul>
-                        <p><a href="s_FoamRoller.html" id="program">폼롤러</a></p>
-                        <p> <a href="s_MassageBall.html" id="program">마사지 볼</a></p>
-                        <p><a href="s_Band.html" id="program">밴드</a></p>
-                    </ul>
-                </div>
-                
-            </div>
-            <div class="main"> 
-                <div class="dropDown"> 
+        <header>
+            <nav class="navbar">
+                <label class="logo">STRETCHING</label>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="program.html">PROGRAM</a></li>
+                    <li><a href="messageBoard.html">BULLETIN BOARD</a></li>
+                    <li><a class="active" href="sportingGoods.html">SPORTING GOODS</a></li>
+                    <li><a href="signin.html">LOGIN</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="grid">
+            <article>
+                <div class="aside">
                     <div>
-                        <div class="top">
-                            <select name="" id="">
-                                <option value="">검색선택</option>
-                                <option value="">추천순</option>
-                                <option value="">최신순</option>
-                                <option value="">인기순</option>
-                                <option value="">높은가격순</option>
-                                <option value="">낮은 가격순</option>
-                            </select>
-                            
-                            <input type="text" maxlength="100">
-                            <input type="submit" value="검색">
-                            <input type="button" value="초기화">
-                        </div> 
+                        <h1><a href="sportingGoods.html" class="program">SPORTING GOODS</a></h1>
                     </div>
-                    <section>
-                        <div id="content_box">
-                            <div class="box">
-                                <div>
-                                    <h3>전체상품</h3>
-                                    <p>판매자추천순 | 인기도순 | 평점높은순 | 최신등록순</p>    
-                                </div>   
-                                <div id="item">
-                                    <div class="item1"><a href=""><img src="ball1.jpg"></a>
-                                        <div class="item1">와두 마사지 볼</div>
-                                        <div>5,500원</div>
-                                        <div>평점<span>4.8</span>·리뷰<span>1,248</span></div>
-                                    </div>
-                                    <div>
-                                        <div class="item1"><a href=""></a><img src="ball2.jpg"></a></div>
-                                        <div>멜킨스포츠 마사지 볼</div>
-                                        <div>3,700원</div>
-                                        <div>평점<span>4.8</span>·리뷰<span>3,344</span></div>
-                                    </div>
-                                    <div>
-                                        <div class="item1"><a href=""><img src="ball3.jpg"></a></div>
-                                        <div>아리프 마사지 볼</div>
-                                        <div>8,400원</div>
-                                        <div>평점<span>4.8</span>·리뷰<span>782</span></div>
-                                    </div>
-                                    <div>
-                                        <div class="item1"><a href=""><img src="ball4.jpg"></a></div>
-                                        <div>안다르 마사지 볼</div>
-                                        <div>9,900원</div>
-                                        <div>평점<span>4.7</span>·리뷰<span>8,514</span></div>
-                                    </div>
-                                   <div>
-                                        <div class="item1"><a href=""><img src="ball5.jpg"></a></div>
-                                        <div>트리거포인트 마사지 볼</div>
-                                        <div>18,800원</div>
-                                        <div>평점<span>4.8</span>·리뷰<span>2,710</span></div>
-                                   </div>
-                                   <div>
-                                        <div class="item1"><a href=""><img src="ball6.jpg"></a></div>
-                                        <div>레토 마사지 볼</div>
-                                        <div>3,900원</div>
-                                        <div>평점<span>4.8</span>·리뷰<span>350</span></div>
-                                   </div>
-                                   <div>
-                                        <div class="item1"><a href=""><img src="ball7.jpg"></a></div>
-                                        <div>스포홀릭 마사지 볼</div>
-                                        <div>1,400원</div>
-                                        <div>평점<span>4.8</span>·리뷰<span>294</span></div>
-                                   </div>
-                                </div>                                              
+                    <div >
+                        <ul>
+                            <p><a href="s_FoamRoller.html" class="program">FOAMROLLER</a></p>
+                            <p> <a class="active2" href="s_MassageBall.html" class="program">MASSAGEBALL</a></p>
+                            <p><a href="s_Band.html" class="program">BAND</a></p>
+                        </ul>
+                    </div> 
+                </div>
+            </article>
+            <article class="mainscreen">
+                <div class="listmain"> 
+                    <div class="vedioList"> 
+                        <span>
+                            <span class="box">
+                                <h3>전체상품</h3>
+                                <span>판매자추천순 | 인기도순 | 평점높은순 | 최신등록순</span>    
+                            </span> 
+                        </span>
+                        <span class="search" style="margin-right: 120px; margin-top: 0px;">
+                            <div class="icon"></div>
+                            <div class="input">
+                                <input type="text" placeholder="Search" id="mySearch">
                             </div>
-                        </div>
-                    </section>
+                            <span class="clear" onclick="document.getElementById('mySearch').value = ''"></span>
+                        </span>
+                    </div>
+                </div> 
+                <div class="goodslist">
+                    <div class="content_box"> 
+                        <div class="item">
+                            <div class="item1">
+                                <div><a href=""><img src="/TeamProject/src/main/resources/static/img/ball1.jpg" alt="마사지 볼 사진"></a></div>
+                                <div>와두 마사지 볼</div>
+                                <div>5,500원</div>
+                                <div>평점<span>4.8</span>·리뷰<span>1,248</span></div>
+                            </div>
+                            <div class="item1">
+                                <div><a href=""></a><img src="/TeamProject/src/main/resources/static/img/ball2.jpg"  alt="마사지 볼 사진"></a></div>
+                                <div>멜킨스포츠 마사지 볼</div>
+                                <div>3,700원</div>
+                                <div>평점<span>4.8</span>·리뷰<span>3,344</span></div>
+                            </div>
+                            <div class="item1">
+                                <div><a href=""><img src="/TeamProject/src/main/resources/static/img/ball3.jpg"  alt="마사지 볼 사진"></a></div>
+                                <div>아리프 마사지 볼</div>
+                                <div>8,400원</div>
+                                <div>평점<span>4.8</span>·리뷰<span>782</span></div>
+                            </div>
+                            <div class="item1">
+                                <div><a href=""><img src="/TeamProject/src/main/resources/static/img/ball4.jpg"  alt="마사지 볼 사진"></a></div>
+                                <div>안다르 마사지 볼</div>
+                                <div>9,900원</div>
+                                <div>평점<span>4.7</span>·리뷰<span>8,514</span></div>
+                            </div>
+                           <div class="item1">
+                                <div><a href=""><img src="/TeamProject/src/main/resources/static/img/ball5.jpg"  alt="마사지 볼 사진"></a></div>
+                                <div>트리거포인트 마사지 볼</div>
+                                <div>18,800원</div>
+                                <div>평점<span>4.8</span>·리뷰<span>2,710</span></div>
+                           </div>
+                           <div class="item1">
+                                <div><a href=""><img src="/TeamProject/src/main/resources/static/img/ball6.jpg"  alt="마사지 볼 사진"></a></div>
+                                <div>레토 마사지 볼</div>
+                                <div>3,900원</div>
+                                <div>평점<span>4.8</span>·리뷰<span>350</span></div>
+                           </div>
+                           <div class="item1">
+                                <div><a href=""><img src="/TeamProject/src/main/resources/static/img/ball7.jpg"  alt="마사지 볼 사진"></a></div>
+                                <div>스포홀릭 마사지 볼</div>
+                                <div>1,400원</div>
+                                <div>평점<span>4.8</span>·리뷰<span>294</span></div>
+                           </div>
+                        </div>                                                      
                     </div> 
                     <div class="postPage">
                         <a href="">1</a>
@@ -120,8 +111,20 @@
                         <a href="">4</a>
                         <a href="">5</a>
                     </div>
+                </div>        
+            </article>
+            </section>        
+            <footer>
+                <div class="footer">
+                    <ul>
+                        <li>유한대학교 </li>
+                        <li>컴퓨터소프트웨어공학과</li>
+                        <li>컴퓨터소프트웨어전공 </li>
+                        <li>3조</li>
+                        <li>02-2610-0768</li>
+                    </ul>
                 </div>
-            </div>
-        
+            </footer>
+            <script src="/TeamProject/src/main/resources/static/js/search.js"></script>
     </body>
 </html>

@@ -3,9 +3,11 @@
     <head>
         <meta charset="utf-8">
         <title>마이페이지</title>
-        <link rel="stylesheet" href="navbar.css">
-        <link rel="stylesheet" href="post.css">
-        <link rel="stylesheet" href="aside.css">
+        <link rel="stylesheet" href="/TeamProject/src/main/resources/static/css/navbar.css">
+        <link rel="stylesheet" href="/TeamProject/src/main/resources/static/css/post.css">
+        <link rel="stylesheet" href="/TeamProject/src/main/resources/static/css/aside.css">
+        <link rel="stylesheet" href="/TeamProject/src/main/resources/static/css/goods.css">
+        <link rel="stylesheet" href="/TeamProject/src/main/resources/static/css/footer.css">
         <style>
        #color{
         color: black;
@@ -18,43 +20,53 @@
         </style>
     </head>
     <body>
-        <nav class="navbar">
-            <div>
-                <a href="index.html">홈페이지 이름</a>
-            </div>
-            <div>
-                <a href="program.html">프로그램</a>
-            </div>
-            <div>
-                <a href="messageBoard.html">자유게시판</a>
-            </div>
-            <div>
-                <a href="sportingGoods.html">운동기구</a>
-            </div>
-            <div>
-                <a href="myPage.html">마이페이지</a>
-            </div>
-
-        </nav>
-        <div id="grid">
-            <div class="aside">
-                <div>
-                    <h1><a href="myPage.html" id="program">마이페이지</a></h1>
+        <header>
+            <nav class="navbar">
+                <label class="logo">STRETCHING</label>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="program.html">PROGRAM</a></li>
+                    <li><a href="messageBoard.html">BULLETIN BOARD</a></li>
+                    <li><a href="sportingGoods.html">SPORTING GOODS</a></li>
+                    <li><a class="active" href="myPage.html">MY PAGE</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="grid">
+            <article>
+                <div class="aside">
+                    <div>
+                        <h1><a class="active2" href="myPage.html">MYPAGE</a></h1>
+                    </div>
+                    <div >
+                        <ul>
+                            <p><a href="bookmark.html">BOOKMARK</a></p>
+                            <p><a href="myPost.html">MY POST</a></p>
+                            <p><a href="myPage.html">SETTING</a></p>
+                        </ul>
+                    </div> 
                 </div>
-                <div >
-                    <ul>
-                        <p><a href="myPage.html" id="program">내 정보</a></p>
-                    </ul>
+            </article>
+            <article>
+                <div class="main"> 
+                    <div> 
+                       <div><a href="bookmark.html" id="color">즐겨찾기 목록</a></div>
+                       <div><a href="myPost.html" id="color">내 게시물</a></div>
+                       <div><a href="change.html" id="color">개인 정보 수정</a></div>
+                    </div>
                 </div>
-                
+            </article>
+        </section>
+        <footer>
+            <div class="footer">
+                <ul>
+                    <li>유한대학교 </li>
+                    <li>컴퓨터소프트웨어공학과</li>
+                    <li>컴퓨터소프트웨어전공 </li>
+                    <li>3조</li>
+                    <li>02-2610-0768</li>
+                </ul>
             </div>
-            <div class="main"> 
-                <div> 
-                   <div><a href="bookmark.html" id="color">즐겨찾기 목록</a></div>
-                   <div><a href="myPost.html" id="color">내 게시물</a></div>
-                   <div><a href="change.html" id="color">개인 정보 수정</a></div>
-                </div>
-            </div>
-        
+        </footer>
     </body>
 </html>

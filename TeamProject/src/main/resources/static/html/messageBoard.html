@@ -5,68 +5,82 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>자유게시판</title>
-        <link rel="stylesheet" href="public/styles/share.css" />
-        <link rel="stylesheet" href="public/styles/board.css" />
-        <link rel="stylesheet" href="public/styles/media.css" />
-        <link rel="stylesheet" href="navbar.css">
-        <link rel="stylesheet" href="post.css">
-        <link rel="stylesheet" href="aside.css">
+        <link rel="stylesheet" href="/TeamProject/src/main/resources/static/css/share.css" />
+        <link rel="stylesheet" href="/TeamProject/src/main/resources/static/css/board.css" />
+        <link rel="stylesheet" href="/TeamProject/src/main/resources/static/css/media.css" />
+        <link rel="stylesheet" href="/TeamProject/src/main/resources/static/css/navbar.css">
+        <link rel="stylesheet" href="/TeamProject/src/main/resources/static/css/post.css">
+        <link rel="stylesheet" href="/TeamProject/src/main/resources/static/css/aside.css">
+        <link rel="stylesheet" href="/TeamProject/src/main/resources/static/css/goods.css">
+        <link rel="stylesheet" href="/TeamProject/src/main/resources/static/css/footer.css">
     </head>
+    <style>
+        .main-container{
+            padding-left: 250px;
+        }
+    </style>
     <body>
-        <nav class="navbar">
-            <div>
-                <a href="index.html">홈페이지 이름</a>
-            </div>
-            <div>
-                <a href="program.html">프로그램</a>
-            </div>
-            <div>
-                <a href="messageBoard.html">자유게시판</a>
-            </div>
-            <div>
-                <a href="sportingGoods.html">운동기구</a>
-            </div>
-            <div>
-                <a href="signin.html">로그인</a>
-            </div>
-
-        </nav>
-        <div id="grid">
-            <div class="aside">
-                <div>
-                    <h1><a href="messageBoard.html" id="program">자유게시판</a></h1>
+        <header>
+            <nav class="navbar">
+                <label class="logo">STRETCHING</label>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="program.html">PROGRAM</a></li>
+                    <li><a class="active" href="messageBoard.html">BULLETIN BOARD</a></li>
+                    <li><a href="sportingGoods.html">SPORTING GOODS</a></li>
+                    <li><a href="signin.html">LOGIN</a></li>
+                </ul>
+            </nav>  
+        </header>
+        <section class="grid">
+            <article>
+                <div class="aside">
+                    <div>
+                        <h1><a href="messageBoard.html" id="program">BULLETIN BOARD</a></h1>
+                    </div>
+                    <div >
+                        <ul>
+                            <p><a class="active2" href="messageBoard.html" id="program">BULLETIN BOARD</a></p>
+                            <p> <a href="m_myRoutine.html" id="program">My ROUTINE</a></p>
+                        </ul>
+                    </div>
                 </div>
-                <div >
-                    <ul>
-                        <p><a href="messageBoard.html" id="program">자유게시판</a></p>
-                        <p> <a href="m_myRoutine.html" id="program">나만의 운동루틴</a></p>
-                    </ul>
-                </div>
-                
+            </article>
+            <article style="min-height: calc(100vh - 170px);">
+                <div class="main-container">
+                    <div class="main-title">
+                         <h1>자유게시판</h1>
+                    </div>
+                    <div class="board-list-container">
+                      <div class="board-list-top">
+                        <div class="board-top">
+                          <div class="board-num">번호</div>
+                          <div class="board-title">제목</div>
+                          <div class="board-writer">글쓴이</div>
+                          <div class="board-date">작성일</div>
+                          <div class="board-count">조회</div>
+                        </div>
+                      </div>
+                      <div class="board-list" id="board-list-table"></div>
+                      <div class="board-page" id="board-list-page"></div>
+                      <div class="btn-wrap">
+                        <a href="write.html" class="btn-add">등록</a>
+                      </div>
+                    </div>
+                  </div>
+                  <script src="/TeamProject/src/main/resources/static/js/write.js" defer></script>          
+            </article>
+        </section>  
+        <footer>
+            <div class="footer">
+                <ul>
+                    <li>유한대학교 </li>
+                    <li>컴퓨터소프트웨어공학과</li>
+                    <li>컴퓨터소프트웨어전공 </li>
+                    <li>3조</li>
+                    <li>02-2610-0768</li>
+                </ul>
             </div>
-
-<div class="main-container">
-      <div class="main-title">
-           <h1>자유게시판</h1>
-      </div>
-      <div class="board-list-container">
-        <div class="board-list-top">
-          <div class="board-top">
-            <div class="board-num">번호</div>
-            <div class="board-title">제목</div>
-            <div class="board-writer">글쓴이</div>
-            <div class="board-date">작성일</div>
-            <div class="board-count">조회</div>
-          </div>
-        </div>
-        <div class="board-list" id="board-list-table"></div>
-        <div class="board-page" id="board-list-page"></div>
-        <div class="btn-wrap">
-          <a href="write.html" class="btn-add">등록</a>
-        </div>
-      </div>
-    </div>
-    <script src="public/scripts/write.js" defer></script>
-        
+        </footer>         
     </body>
 </html>

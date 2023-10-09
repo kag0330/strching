@@ -17,28 +17,28 @@ const activeSwipeArticle = (articeClassName) => {
 
 const productItemList = [
    {
-    itemThumbnail: 'img/foam6.jpg',
+    itemThumbnail: '/TeamProject/src/main/resources/static/img/foam6.jpg',
     itemName: '바디맵 폼롤러',
     itemPrice: 12000,
     itemGrade: 4.8,
     reviewCount: 6570,
    },
    {
-    itemThumbnail: 'img/foam7.jpg',
+    itemThumbnail: '/TeamProject/src/main/resources/static/img/foam7.jpg',
     itemName: '아고진 폼롤러',
     itemPrice: 12000,
     itemGrade: 4.8,
     reviewCount: 8016,
    },
    {
-    itemThumbnail: 'img/band3.jpg',
+    itemThumbnail: '/TeamProject/src/main/resources/static/img/band3.jpg',
     itemName: '이고진 벤드',
     itemPrice: 15000,
     itemGrade: 4.7,
     reviewCount: 8605,
    },
    {
-    itemThumbnail: 'img/band4.jpg',
+    itemThumbnail: '/TeamProject/src/main/resources/static/img/band4.jpg',
     itemName: '테라 밴드',
     itemPrice: 9900,
     itemGrade: 4.7,

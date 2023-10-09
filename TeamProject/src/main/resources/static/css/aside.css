@@ -1,4 +1,4 @@
-#program{
+.program{
     color: black;
 }
 #program2{
@@ -6,41 +6,47 @@
     padding-top: 30%;
 }
 .aside{
-    border: 2px solid black;
-    border-radius: 10px;
-    padding-top: 30px;
+    padding-top: 10px;
     width: 200px;
+    padding-left: 30px;
     
 }
-#grid{
+.gird a.active2, a:hover{
+    border: 1px solid black; 
+    border-radius: 3px;
+    transition: .5s;
+}
+p{
+    padding-bottom: 10px;
+}
+.grid{
     display: grid;
     grid-template-columns: 150px 1fr;
     padding-top: 30px;
 }
 .main{
-    padding-top: 30px;
-    padding-left: 100px;
+    padding-left: 130px;
 }
-.dropDown {
-  
-    list-style: none;
-    padding-left: 0;
-    padding: 15px 20px;
-}  
 .you1{
 padding: 10px 10px 10px;
 }
 
-#youtube{
+.youtube{
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
-padding-top: 50px;
+padding-top: 30px;
 padding-left: 30px;
 }
-.top{
+.search{
 float: right;
-padding-right: 100px;
+
 }
 iframe{
 border-radius: 10px;
+}
+.asidemenu{
+    width: 300px;
+}
+.mainscreen{
+    width: 1fr;
 }
