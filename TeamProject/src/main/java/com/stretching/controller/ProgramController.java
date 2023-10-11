@@ -18,7 +18,11 @@ public class ProgramController {
 		YoutubeService ys = new YoutubeService();
 		List<String> lists = ys.select_all();
 		System.out.println(lists);
-		model.addAttribute("lists",lists);
+		model.addAttribute("lists", lists);
 		return "program";
-}
+	}
+	@GetMapping("/login")
+	public String logn() {
+		return "login";
+	}
 }

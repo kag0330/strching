@@ -1,5 +1,6 @@
 <html xmlns:th="http://www.thymeleaf.org">
-		<nav class="navbar">
+	<link rel="stylesheet" href="css/navbar.css">
+		<nav class="navbar" th:fragment="header">
 		<div>
 			<a href="/">홈페이지 이름</a>
 		</div>
@@ -12,7 +13,7 @@
 		<div>
 			<a href="/sportingGoods">운동기구</a>
 		</div>
-		<div>
+	 	<div>
 			<a href="/login">로그인</a>
 		</div>
 		</nav>

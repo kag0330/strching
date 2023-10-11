@@ -22,7 +22,7 @@ spring:
     
 #DB 설정
   datasource:
-    url: jdbc:mysql://localhost/strchingDB?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+    url: jdbc:mysql://kag0330.duckdns.org/strchingDB?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
     username: strchingadmin
     password: tmxmfpcld1!
     driver-class-name: com.mysql.cj.jdbc.Driver

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>로그인</title>
+	<style>
+		a {
+			text-decoration: none;
+			color: gray;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+
+		.center {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 400px;
+			background-color: powderblue;
+			border-radius: 5px;
+			text-align: center;
+		}
+
+		form {
+			padding: 0 40px;
+			box-sizing: border-box;
+		}
+
+		#submit {
+			width: 170px;
+			height: 30px;
+		}
+	</style>
+</head>
+
+<body>
+	<th:block layout:fragment="header" th:include="/fragments/header"></th:block>
+
+	<div class="center">
+		<a href="/admin_youtubeUpload">테스트용 유튜브업로드 링크</a>
+		<h1><a href="index.html">홈페이지 이름</a></h1>
+		<h1>로그인</h1>
+		<form method="post" action="myPage.html">
+			<div>
+				<input type="text" placeholder="아이디">
+			</div>
+			<div>
+				<input type="password" placeholder="비밀번호">
+			</div>
+			<div>
+				<input type="checkbox">아이디 저장
+				<input type="checkbox">로그인 상태 유지
+			</div>
+			<input type="submit" value="로그인" id="submit">
+			<input type="submit" value="카카오로그인" id="submit">
+			<div class="find">
+				<a href="find_id.html">아이디 찾기 |</a>
+				<a href="find_pass.html">비밀번호 찾기 |</a>
+				<a href="signup.html">회원가입</a>
+			</div>
+		</form>
+
+	</div>
+
+</body>
+
+</html>

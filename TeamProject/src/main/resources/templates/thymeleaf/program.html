@@ -10,7 +10,7 @@
 </head>
 
 <body>
-	<th:block layout:fragment="header" th:include="/fragments/header"></th:block>
+	<nav th:replace="~{/fragments/header::header}"></nav>
 	<div id="grid">
 		<div class="aside">
 			<div>
@@ -46,7 +46,8 @@
 					<span class="you1" th:each="list: ${lists}">
 						<iframe width="350" height="250" th:src="${list.iframe_url}" title="YouTube video player"
 							frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen>aaa</iframe>
 						<div>
 							<span th:text="${list.title}"></span><br>
 							<span th:text="${list.uploader}"></span>
