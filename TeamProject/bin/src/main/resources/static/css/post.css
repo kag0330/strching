@@ -1,0 +1,90 @@
+body{
+    font-size: 16x;
+}
+.postPage{
+    text-decoration: none;
+    color: black;
+}
+.write a{
+    text-decoration: none;
+    color: black;
+    box-sizing: border-box;
+    border: 1px solid black;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+.board_list{
+    width: 1200px;
+    margin: auto;
+    
+}
+h1{
+    margin-bottom: 25px;
+    margin-top: 55px;
+}
+.postPage{
+    margin-top: 20px;
+    text-align: center;
+}
+.postPage a{
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    box-sizing: border-box;
+    border: 1.5px solid black;
+    
+    line-height: 100%;
+    color: black;
+    
+}
+.board_list {
+    width: 80%;
+    border: 1px solid gray;
+    
+    
+}
+.board_list > div {
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+.board_list > menu {
+    border-bottom: 1px solid gray;
+}
+
+.board_list{
+    width: 100%;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black; 
+  }
+  .board_list > div > div{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px 0;
+  }
+  .board_list > div > div > div{
+    display: inline-block;
+    vertical-align: middle;
+    
+  }
+  .board_list .number{
+    width: 10%;
+  }
+  .board_list .title2{
+    width: 50%;
+    text-align: center;
+  }
+  .board_list .titl1 .title2{
+    text-align: center;
+  }
+  .board_list .date{
+    width: 10%;
+  }
+  .board_list .writer{
+    width: 10%;
+  }
+  .board_list .board{
+    width: 10%;
+  }

@@ -1,0 +1,46 @@
+#program{
+    color: black;
+}
+#program2{
+    color: black;
+    padding-top: 30%;
+}
+.aside{
+    border: 2px solid black;
+    border-radius: 10px;
+    padding-top: 30px;
+    width: 200px;
+    
+}
+#grid{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    padding-top: 30px;
+}
+.main{
+    padding-top: 30px;
+    padding-left: 100px;
+}
+.dropDown {
+  
+    list-style: none;
+    padding-left: 0;
+    padding: 15px 20px;
+}  
+.you1{
+padding: 10px 10px 10px;
+}
+
+#youtube{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+padding-top: 50px;
+padding-left: 30px;
+}
+.top{
+float: right;
+padding-right: 100px;
+}
+iframe{
+border-radius: 10px;
+}

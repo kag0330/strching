@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="H2Database/src/java10/src"/>
+	<classpathentry kind="src" path="H2Database/src/java21/src"/>
+	<classpathentry kind="src" path="H2Database/src/java9/src"/>
+	<classpathentry kind="src" path="H2Database/src/main"/>
+	<classpathentry kind="src" path="H2Database/src/test"/>
+	<classpathentry kind="src" path="H2Database/src/tools"/>
+	<classpathentry kind="src" path="TeamProject/src/main/java"/>
+	<classpathentry kind="src" path="TeamProject/src/test/java"/>
+	<classpathentry kind="lib" path="H2Database/bin/h2-2.2.224.jar"/>
+	<classpathentry kind="lib" path="H2Database/service/wrapper.jar"/>
+	<classpathentry kind="lib" path="TeamProject/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="output" path="H2Database/src/java10/precompiled"/>
+</classpath>
