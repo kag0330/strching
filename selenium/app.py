@@ -68,19 +68,30 @@ def read_all_existing_urls():
                 existing_urls.add(item.get('url', ''))
     return existing_urls
 
+
 def process_data(scraped_data):
     new_data = []
     seq = 0
 
     for title, url, img_url, uploader in scraped_data:
         seq += 1
-        new_data.append({
-            "seq": seq,
-            "title": title,
-            "url": url,
-            "img_url": img_url,
-            "uploader": uploader
-        })
+
+        # 'watch?v=' 뒤의 값을 URL에서 추출
+        video_id_match = VIDEO_ID_PATTERN.search(url)
+        if video_id_match:
+            video_id = video_id_match.group(1)
+
+            # 해당 video_id를 사용하여 iframe URL 생성
+            iframe_url = f"https://www.youtube.com/embed/{video_id}"
+
+            new_data.append({
+                "seq": seq,
+                "title": title,
+                "url": url,
+                "iframe_url": iframe_url,
+                "img_url": img_url,
+                "uploader": uploader
+            })
 
     return new_data
 
@@ -109,8 +120,7 @@ def scrape_youtube():
 
         scraped_data = scrape_webpage(driver, max_items, all_existing_urls)
         processed_data = process_data(scraped_data)
-
-        current_time = datetime.now().strftime("%Y%m%d%H%M%S")
+        current_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
         filename = f"{current_time}_{search_query}.json"
         save_to_json(processed_data, filename)
 

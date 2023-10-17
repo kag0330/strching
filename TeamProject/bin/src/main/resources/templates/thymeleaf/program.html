@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<title>프로그램</title>
+	<link rel="stylesheet" href="css/navbar.css">
+	<link rel="stylesheet" href="css/post.css">
+	<link rel="stylesheet" href="css/aside.css">
+</head>
+
+<body>
+	<nav th:replace="~{/fragments/header::header}"></nav>
+	<div id="grid">
+		<div class="aside">
+			<div>
+				<h1><a href="program.html" id="program">프로그램</a></h1>
+			</div>
+			<div>
+				<ul>
+					<p><a href="p_Stretching.html" id="program">스트레칭</a></p>
+					<p> <a href="p_Massage.html" id="program">마사지</a></p>
+					<p><a href="p_CorrectionalExercise.html" id="program">교정운동</a></p>
+				</ul>
+			</div>
+
+		</div>
+		<div class="main">
+			<div class="dropDown">
+				<div>
+					<div class="top">
+						<select name="" id="">
+							<option value="">검색선택</option>
+							<option value="">제목</option>
+							<option value="">최신순</option>
+							<option value="">인기순</option>
+						</select>
+
+						<input type="text" maxlength="100">
+						<input type="submit" value="검색">
+						<input type="button" value="초기화">
+					</div>
+				</div>
+
+				<div>
+					<span class="you1" th:each="list: ${lists}">
+						<iframe width="350" height="250" th:src="${list.iframe_url}" title="YouTube video player"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen>aaa</iframe>
+						<div>
+							<span th:text="${list.title}"></span><br>
+							<span th:text="${list.uploader}"></span>
+						</div>
+
+
+					</span>
+				</div>
+				<div class="postPage">
+					<a href="">1</a>
+					<a href="">2</a>
+					<a href="">3</a>
+					<a href="">4</a>
+					<a href="">5</a>
+				</div>
+			</div>
+		</div>
+
+</body>
+
+</html>
