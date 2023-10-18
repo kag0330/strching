@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>운동기구-폼롤러</title>
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/post.css">
+        <link rel="stylesheet" href="css/aside.css">
+        <link rel="stylesheet" href="css/goods.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/search.css">
+        <link rel="stylesheet" href="css/videoList.css">
+    </head>
+    <body>
+        <header>
+            <nav th:replace="~{/fragments/header::header}"></nav>  
+        </header>
+        <section class="grid">
+            <article class="asidemenu">
+                <div class="aside">
+                    <div>
+                        <h1><a class="active2" href="/sportingGoods">SPORTING GOODS</a></h1>
+                    </div>
+                    <div >
+                        <ul>
+                            <p><a href="/s_FoamRoller">FOAMROLLER</a></p>
+                            <p> <a href="/s_MassageBall" >MASSAGEBALL</a></p>
+                            <p><a href="/s_Band" >BAND</a></p>
+                        </ul>
+                    </div> 
+                </div>
+            </article>
+            <article class="mainscreen">
+                <div class="listmain"> 
+                    <div class="videoList"> 
+                        <span>
+                            <span class="box">
+                                <h3>전체상품</h3>
+                                <span>판매자추천순 | 인기도순 | 평점높은순 | 최신등록순</span>    
+                            </span> 
+                        </span>
+                        <span class="search" style="margin-right: 120px; margin-top: 0px;">
+                            <div class="icon"></div>
+                            <div class="input">
+                                <input type="text" placeholder="Search" id="mySearch">
+                            </div>
+                            <span class="clear" onclick="document.getElementById('mySearch').value = ''"></span>
+                        </span>
+                    </div>
+                </div>       
+                <div class="goodslist">
+                    <div class="content_box">   
+                            <div class="item">
+                                <div class="item1"><a href="https://smartstore.naver.com/delta1114/products/599690620?NaPm=ct%3Dlnvydoy0%7Cci%3D0yS00015131zJT%2DxXviP%7Ctr%3Dpla%7Chk%3D08462f560f1f90cb8f064566a0b7f7159d970605">
+                                    <div><img src="img/foam1.jpg"></div>
+                                    <div>밸런시스 폼롤러</div>
+                                    <div>27,900원</div>
+                                    <div>평점<span>4.8</span>·리뷰<span>13,939</span></div>
+                                </a></div>
+                                <div class="item1"><a href="https://brand.naver.com/melkin/products/7124664880?NaPm=ct%3Dlnvye228%7Cci%3D9ce5b18177aa0cf0acfa673dcddbf88601d0618b%7Ctr%3Dsls%7Csn%3D447572%7Chk%3Df8a30c42c9b863b274786039240aaeab536744d7">
+                                    <div><img src="img/foam2.jpg"></div>
+                                    <div>멜킨 폼롤러</div>
+                                    <div>20,900원</div>
+                                    <div>평점<span>4.8</span>·리뷰<span>7,717</span></div>
+                                </a></div>
+                                <div class="item1"><a href="https://smartstore.naver.com/letogms/products/8828697751?NaPm=ct%3Dlnvydddc%7Cci%3D8d79e5b043cd39c6faacdcc0b978c35a843c9c8c%7Ctr%3Dslsc%7Csn%3D161836%7Chk%3D8da26919f363fea739e6cc9facdbe33c57257474">
+                                    <div><img src="img/ball6.jpg"></div>
+                                    <div>레토 마사지 볼</div>
+                                    <div>4,000원</div>
+                                    <div>평점<span>4.8</span>·리뷰<span>350</span></div>
+                                </a></div>
+                               <div class="item1"><a href="https://smartstore.naver.com/spohoilcstore/products/5494609313?NaPm=ct%3Dlnvy8ecw%7Cci%3D89897438d0bca3c10d935b4b84f0ccf6b6542caa%7Ctr%3Dsls%7Csn%3D809321%7Chk%3D5391334ab9476d6dbf7caeb17dcd5153ea52aebf">
+                                    <div><img src="img/ball7.jpg"></div>
+                                    <div>스포홀릭 마사지 볼</div>
+                                    <div>1,400원</div>
+                                    <div>평점<span>4.8</span>·리뷰<span>294</span></div>
+                                </a></div>
+                                <div class="item1"><a href="https://smartstore.naver.com/ironvic/products/5590396052?NaPm=ct%3Dlnvyehhs%7Cci%3D0yW0001E131zsti3QvmP%7Ctr%3Dpla%7Chk%3D6f1c08238be00831498681f7e1ade716a500395e">
+                                    <div><img src="img/band5.jpg"></div>
+                                    <div>아이언빅 밴드</div>
+                                    <div>14,500원</div>
+                                    <div>평점<span>4.8</span>·리뷰<span>3,962</span></div>
+                                </a></div>
+                               <div class="item1"><a href="https://smartstore.naver.com/ironvic/products/5237170020?NaPm=ct%3Dlnvyf00g%7Cci%3Dae3fd1fd767f457f2bebca5c1bf772bbf0af7071%7Ctr%3Dslsc%7Csn%3D2341409%7Chk%3Dfdaaf4938e2bbd702084f32f6ed7f924c0e970d1">
+                                    <div ><img src="img/band6.jpg"></div>
+                                    <div>아이언빅 밴드</div>
+                                    <div>2,300원</div>
+                                    <div>평점<span>4.8</span>·리뷰<span>1,744</span></div>
+                                  </a></div>
+                               <div class="item1"><a href="https://smartstore.naver.com/wssports/products/5494547261?n_media=27758&n_query=%EC%8A%A4%ED%8F%AC%EC%B8%A0%EB%B0%B4%EB%93%9C&n_rank=1&n_ad_group=grp-a001-02-000000025387001&n_ad=nad-a001-02-000000167122613&n_campaign_type=2&n_mall_id=wssport77&n_mall_pid=5494547261&n_ad_group_type=2&n_match=3&NaPm=ct%3Dlnvyfatc%7Cci%3D0yu0002e131zg8jTH12p%7Ctr%3Dpla%7Chk%3D1257dab67ac50ded505f0beffdf6700b7f9b70da">
+                                    <div><img src="img/band7.jpg"></div>
+                                    <div>프로스펙스 밴드</div>
+                                    <div>5,600원</div>
+                                    <div>평점<span>4.9</span>·리뷰<span>567</span></div>
+                               </a></div>
+                            </div>                                              
+                        </div>
+                        <div class="postPage">
+                            <a href="">1</a>
+                            <a href="">2</a>
+                            <a href="">3</a>
+                            <a href="">4</a>
+                            <a href="">5</a>
+                        </div>
+                    </div> 
+            </article>
+        </section>
+        <footer>
+            <div class="footer">
+                <ul>
+                    <li>유한대학교 </li>
+                    <li>컴퓨터소프트웨어공학과</li>
+                    <li>컴퓨터소프트웨어전공 </li>
+                    <li>3조</li>
+                    <li>02-2610-0768</li>
+                </ul>
+            </div>
+        </footer>
+        <script src="js/search.js"></script>
+    </body>
+</html>

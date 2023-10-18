@@ -11,4 +11,24 @@ public class BoardController {
 		return "messageBoard";
 	}
 
+	@GetMapping("/write")
+	public String write() {
+		return "write";
+	}
+	@GetMapping("/write-content")
+	public String writecontent() {
+		return "write-content";
+		
+	}
+	@GetMapping("/write-edit")
+	public String writeedit() {
+		return "write-edit";
+	}
+	
+	
+	@GetMapping("/m_myRoutine")
+	public String myroutine() {
+		return "m_myRoutine";
+	}
+
 }

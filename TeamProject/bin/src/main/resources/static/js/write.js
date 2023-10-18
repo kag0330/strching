@@ -45,9 +45,9 @@ let currentPage = 1;
 let date = new Date(); // 현재 시간
 let num = 1;
 let count = 0;
-let linkBoardList = "messageBoard.html";
-let linkWriteContent = "write-content.html";
-let linkWriteEdit = "write-edit.html";
+let linkBoardList = "/messageBoard";
+let linkWriteContent = "/write-content";
+let linkWriteEdit = "/write-edit";
 
 date = `${date.getFullYear()}.${date.getMonth() + 1}.${date.getDate()}`;
 

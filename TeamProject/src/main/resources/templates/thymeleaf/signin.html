@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>로그인</title>
+        <link rel="stylesheet" href="css/signin.css">
+        
+    </head>
+    <body>
+        <th:block layout:fragment="header" th:include="/fragments/header"></th:block>
+        <div class="center">
+            
+            <h1>로그인</h1>
+            <form  action="/myPage">
+                <div>
+                    <input class="input input-id" type="text" placeholder="아이디" required autofocus>
+                </div>
+                <div>
+                    <input class="input input-password"  type="password" placeholder="비밀번호" required>
+                </div>
+                <div>
+                <input class="login-button" type="submit" value="로그인" id="submit">
+                <div class="divider">
+                    <b>또는</b>
+                </div>
+                <button class="kakao-login-button"  onclick="kakaoLogin()">카카오 로그인</button>
+
+                <a id="kakao-login-btn"></a>
+                <div class="find">
+                    <a href="/find_id">아이디 찾기 |</a>
+                    <a href="/find_pass">비밀번호 찾기 |</a>
+                    <a href="/signup">회원가입</a>
+                </div>
+            </form>
+        </div>
+        <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+        <script type='text/javascript'>
+              Kakao.init('9530a556e615d7076a5359443cd2306e'); // 카카오 SDK 초기화 
+              
+              const kakaoLogin = () => {
+                Kakao.Auth.login({
+                    success: function(authObj) { // 카카오 로그인을 성공하면 호출
+                        Kakao.API.request({
+                            url: '/v1/user/me',
+                            success: function(res) {
+                            alert(JSON.stringify(res));
+                            },
+                            fail: function(error) {
+                            alert(JSON.stringify(error));
+                            }
+                        });
+                    },
+                    fail: function(err) { // 카카오 로그인을 실패하면 호출
+                        alert(JSON.stringify(err));
+                    }
+                });
+              }
+            </script>
+    </body>
+</html>
