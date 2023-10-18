@@ -10,9 +10,7 @@ public class BoardController {
 	public String messageBoard() {
 		return "messageBoard";
 	}
-<<<<<<< Updated upstream
 
-=======
 	@GetMapping("/write")
 	public String write() {
 		return "write";
@@ -32,5 +30,5 @@ public class BoardController {
 	public String myroutine() {
 		return "m_myRoutine";
 	}
->>>>>>> Stashed changes
+
 }

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>자유게시판</title>
+        <link rel="stylesheet" href="css/share.css" />
+        <link rel="stylesheet" href="css/board.css" />
+        <link rel="stylesheet" href="css/media.css" />
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/post.css">
+        <link rel="stylesheet" href="css/aside.css">
+        <link rel="stylesheet" href="css/goods.css">
+        <link rel="stylesheet" href="css/footer.css">
+    </head>
+    <style>
+        .main-container{
+            padding-left: 250px;
+        }
+    </style>
+    <body>
+            <nav th:replace="~{/fragments/header::header}"></nav>  
+        <section class="grid">
+            <article>
+                <div class="aside">
+                    <div>
+                        <h1><a href="/messageBoard" id="program">BULLETIN BOARD</a></h1>
+                    </div>
+                    <div >
+                        <ul>
+                            <p><a class="active2" href="/messageBoard" >BULLETIN BOARD</a></p>
+                            <p> <a href="/m_myRoutine">My ROUTINE</a></p>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            <article style="min-height: calc(100vh - 170px);">
+                <div class="main-container">
+                    <div class="main-title">
+                         <h1>자유게시판</h1>
+                    </div>
+                    <div class="board-list-container">
+                      <div class="board-list-top">
+                        <div class="board-top">
+                          <div class="board-num">번호</div>
+                          <div class="board-title">제목</div>
+                          <div class="board-writer">글쓴이</div>
+                          <div class="board-date">작성일</div>
+                          <div class="board-count">조회</div>
+                        </div>
+                      </div>
+                      <div class="board-list" id="board-list-table"></div>
+                      <div class="board-page" id="board-list-page"></div>
+                      <div class="btn-wrap">
+                        <a href="/write" class="btn-add">등록</a>
+                      </div>
+                    </div>
+                  </div>
+                  <script src="js/write.js" defer></script>          
+            </article>
+        </section>  
+        <footer>
+            <div class="footer">
+                <ul>
+                    <li>유한대학교 </li>
+                    <li>컴퓨터소프트웨어공학과</li>
+                    <li>컴퓨터소프트웨어전공 </li>
+                    <li>3조</li>
+                    <li>02-2610-0768</li>
+                </ul>
+            </div>
+        </footer>         
+    </body>
+</html>

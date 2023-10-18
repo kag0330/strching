@@ -3,11 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    padding-left: 35%;
-    margin-top: 30px;
-    background-color: #EBEDF2;
-}
+
+
 a{
     text-decoration: none;
     color: black;
@@ -18,6 +15,8 @@ h1{
  
 }
 form{
+    padding-left: 35%;
+    margin-top: 30px;
     width: 500px; 
     height: 650px;
     background-color: white;
