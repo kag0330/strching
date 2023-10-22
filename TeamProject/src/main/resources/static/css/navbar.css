@@ -5,7 +5,10 @@
     text-decoration: none;
     list-style: none;
 }
-
+body {
+    width: 1450px; /* 전체 페이지의 너비를 1450픽셀로 설정 */
+    margin: 0 auto; /* 페이지를 중앙 정렬하는 데 도움 */
+}
 a{
     text-decoration: none;
     color: black;
