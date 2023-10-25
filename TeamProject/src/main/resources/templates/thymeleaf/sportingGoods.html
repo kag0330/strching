@@ -11,7 +11,13 @@
         <link rel="stylesheet" href="css/search.css">
         <link rel="stylesheet" href="css/videoList.css">
     </head>
+    <style>
+		.box{
+		border : 1px solid black;
+		}
+	</style>
     <body>
+		<div class="box">
         	<th:block th:replace="~{/fragments/navbar::navbar}"></th:block>
         <section class="grid">
             <article class="asidemenu">
@@ -32,7 +38,7 @@
                 <div class="listmain"> 
                     <div class="videoList"> 
                         <span>
-                            <span class="box">
+                            <span>
                                 <h3>전체상품</h3>
                                 <span>판매자추천순 | 인기도순 | 평점높은순 | 최신등록순</span>    
                             </span> 
@@ -115,17 +121,7 @@
                     </div> 
             </article>
         </section>
-        <footer>
-            <div class="footer">
-                <ul>
-                    <li>유한대학교 </li>
-                    <li>컴퓨터소프트웨어공학과</li>
-                    <li>컴퓨터소프트웨어전공 </li>
-                    <li>3조</li>
-                    <li>02-2610-0768</li>
-                </ul>
-            </div>
-        </footer>
+        <th:block th:replace="~{/fragments/footer::footer}"></th:block>
         <script src="js/search.js"></script>
     </body>
 </html>

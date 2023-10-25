@@ -23,6 +23,11 @@ public class ProgramController {
 	public String program() {
 		return "program";
 }
+	@GetMapping("/youtubeview")
+
+	public String youtubeview() {
+		return "youtubeview";
+}
 
 	public String program(Model model) {
 		YoutubeService ys = new YoutubeService();

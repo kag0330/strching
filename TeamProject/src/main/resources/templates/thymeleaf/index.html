@@ -6,9 +6,9 @@
 	<meta charset="utf-8">
 	<title>메인페이지</title>
 	<th:block th:replace="~{/fragments/header::header}"></th:block>
-	<link rel="stylesheet" type="text/css" href="css/slide.css">
+	<link rel="stylesheet" href="css/slide.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+ 
 	<style>
 		.main {
 			text-align: center;
@@ -21,13 +21,16 @@
 		#youtube {
 			display: flex;
 		}
-
-
+		
+		.box{
+		border : 1px solid black;
+		}
 	</style>
 </head>
 
-<body>
+	<div class="box">
 	<th:block th:replace="~{/fragments/navbar::navbar}"></th:block>
+	
 	<div class="main">
 		<img th:src="@{/img/stretching.jpg}" width="90%">
 	</div>
@@ -39,7 +42,7 @@
 				<div id="youtube">
 					<span class="you1">
 						<img width="350" height="250"
-							src="https://www.youtube.com/embed/nOGT4lXlSHw?si=g2eN0h7FYctSGFMe"
+							src="https://www.youtube.com/embed/nOGT4lXlSHw?si=g2eN0h7FYctSGFMe" style="margin-left:18px"
 							</img>
 						<br><a th:text="전신스트레칭" id="program"></a>
 					</span>
@@ -49,7 +52,7 @@
 							title="YouTube video player" frameborder="0"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 							allowfullscreen></iframe>
-						<br><a href="" id="program">허리스트레칭</a>
+						<br><a href="youtubeview" id="program">허리스트레칭</a>
 					</span>
 					<span class="you1">
 						<iframe width="350" height="250"
@@ -69,11 +72,10 @@
 					</span>
 				</div>
 			</div>
-		</div>
+		
 	</section>
 	<section>
 		<div id="content_box">
-			<div class="box">
 				<div>
 					<h3>인기영상</h3>
 				</div>
@@ -83,7 +85,7 @@
 							src="https://www.youtube.com/embed/nOGT4lXlSHw?si=g2eN0h7FYctSGFMe"
 							title="YouTube video player" frameborder="0"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-							allowfullscreen></iframe>
+							allowfullscreen style="margin-left:18px"></iframe>
 						<br><a href="" id="program">전신스트레칭</a>
 					</span>
 					<span class="you1">
@@ -112,47 +114,49 @@
 					</span>
 				</div>
 			</div>
-		</div>
 	</section>
 	<section>
 		<div id="content_box">
-			<div class="box">
 				<div>
 					<h3>인기상품</h3>
 				</div>
 				<div id="item">
-					<div class="item1"><a href=""><img src="/img/band1.jpg"></a>
-						<div class="item1">멜킨 라텍스 밴드</div>
+					<div ><a href="/s_Band"><img src="/img/band1.jpg" width="280px" style="margin-left:15px"></a>
+						<div>멜킨 라텍스 밴드</div>
 						<div>3,800원</div>
-						<div>평점<span>4.8</span>·리뷰<span>30,735</span></div>
+						<div>평점 <span>4.8</span> · 리뷰 <span>30,735</span></div>
 					</div>
 					<div>
-						<div class="item1"><a href=""></a><img src="/img/band2.jpg"></a></div>
+					<div><a href="/s_Band"><img src="/img/band2.jpg" width="280px"></a></div>
 						<div>고무나라 밴드</div>
 						<div>1,800원</div>
-						<div>평점<span>4.7</span>·리뷰<span>22,472</span></div>
+						<div>평점 <span>4.7</span> · 리뷰 <span>22,472</span></div>
 					</div>
 					<div>
-						<div class="item1"><a href=""><img src="/img/band3.jpg"></a></div>
+					<div><a href="/s_Band"><img src="/img/band3.jpg" width="280px"></a></div>
 						<div>이고진 밴드</div>
 						<div>2,100원</div>
-						<div>평점<span>4.7</span>·리뷰<span>8,605</span></div>
+						<div>평점 <span>4.7</span> · 리뷰 <span>8,605</span></div>
 					</div>
 					<div>
-						<div class="item1"><a href=""><img src="/img/band4.jpg"></a></div>
+					<div><a href="/s_Band"><img src="/img/band4.jpg" width="280px"></a></div>
 						<div>테라 밴드</div>
 						<div>9,900원</div>
-						<div>평점<span>4.7</span>·리뷰<span>3,866</span></div>
+						<div>평점 <span>4.7</span> · 리뷰 <span>3,866</span></div>
 					</div>
 					<div>
-						<div class="item1"><a href=""><img src="/img/band5.jpg"></a></div>
+					<div><a href="/s_Band"><img src="/img/band5.jpg" width="280px"></a></div>
 						<div>아이언빅 밴드</div>
 						<div>14,500원</div>
-						<div>평점<span>4.8</span>·리뷰<span>3,962</span></div>
+						<div>평점 <span>4.8</span> · 리뷰 <span>3,962</span></div>
 					</div>
 				</div>
-	</section>
-
+				</div>
+				</section>
+				<div style="margin:70px"></div>
+				<th:block th:replace="~{/fragments/footer::footer}"></th:block>
+				</div>
+	
 
 </body>
 </html>
