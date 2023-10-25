@@ -5,9 +5,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>메인페이지</title>
-	<link rel="stylesheet" type="text/css" href="css/navbar.css">
+	<th:block th:replace="~{/fragments/header::header}"></th:block>
 	<link rel="stylesheet" type="text/css" href="css/slide.css">
-    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 	<style>
@@ -22,30 +21,27 @@
 		#youtube {
 			display: flex;
 		}
-		
+
 
 	</style>
 </head>
 
 <body>
-	<th:block layout:fragment="header" th:include="/fragments/header"></th:block>
+	<th:block th:replace="~{/fragments/navbar::navbar}"></th:block>
 	<div class="main">
 		<img th:src="@{/img/stretching.jpg}" width="90%">
 	</div>
 	<section>
 		<div id="content_box">
-			<div class="box">
 				<div>
-					<h3>최신영상</h3>
+					<h3>최신영상</h3><h3 class="view"><a href="/program">전체보기</a></h3>
 				</div>
 				<div id="youtube">
 					<span class="you1">
-						<iframe width="350" height="250"
+						<img width="350" height="250"
 							src="https://www.youtube.com/embed/nOGT4lXlSHw?si=g2eN0h7FYctSGFMe"
-							title="YouTube video player" frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-							allowfullscreen></iframe>
-						<br><a href="" id="program">전신스트레칭</a>
+							</img>
+						<br><a th:text="전신스트레칭" id="program"></a>
 					</span>
 					<span class="you1">
 						<iframe width="350" height="250"

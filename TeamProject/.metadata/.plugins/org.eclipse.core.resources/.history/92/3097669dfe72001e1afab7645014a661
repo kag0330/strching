@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>   
+
+<head>
+	<meta charset="utf-8">
+	<title>메인페이지</title>
+	<link rel="stylesheet" type="text/css" href="css/navbar.css">
+	<link rel="stylesheet" type="text/css" href="css/slide.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+	<style>
+		.main {
+			text-align: center;
+		}
+
+		#item {
+			display: flex;
+		}
+
+		#youtube {
+			display: flex;
+		}
+		
+
+	</style>
+</head>
+
+<body>
+	<th:block layout:fragment="header" th:include="/fragments/header"></th:block>
+	<div class="main">
+		<img th:src="@{/img/stretching.jpg}" width="90%">
+	</div>
+	<section>
+		<div id="content_box">
+			<div class="box">
+				<div>
+					<h3>최신영상</h3>
+				</div>
+				<div id="youtube">
+					<span class="you1">
+						<iframe width="350" height="250"
+							src="https://www.youtube.com/embed/nOGT4lXlSHw?si=g2eN0h7FYctSGFMe"
+							title="YouTube video player" frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen></iframe>
+						<br><a href="" id="program">전신스트레칭</a>
+					</span>
+					<span class="you1">
+						<iframe width="350" height="250"
+							src="https://www.youtube.com/embed/jJJiR7nNeqQ?si=q3PzqwmV-etAqbqt"
+							title="YouTube video player" frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen></iframe>
+						<br><a href="" id="program">허리스트레칭</a>
+					</span>
+					<span class="you1">
+						<iframe width="350" height="250"
+							src="https://www.youtube.com/embed/50WCSpZtdmA?si=ac0ey_5-X6Iewabr"
+							title="YouTube video player" frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen></iframe>
+						<br><a href="" id="program">아침스트레칭</a>
+					</span>
+					<span class="you1">
+						<iframe width="350" height="250"
+							src="https://www.youtube.com/embed/ouRBXs-air8?si=qTD9YX9JPMMhJndV"
+							title="YouTube video player" frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen></iframe>
+						<br><a href="" id="program">목 마사지</a>
+					</span>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div id="content_box">
+			<div class="box">
+				<div>
+					<h3>인기영상</h3>
+				</div>
+				<div id="youtube">
+					<span class="you1">
+						<iframe width="350" height="250"
+							src="https://www.youtube.com/embed/nOGT4lXlSHw?si=g2eN0h7FYctSGFMe"
+							title="YouTube video player" frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen></iframe>
+						<br><a href="" id="program">전신스트레칭</a>
+					</span>
+					<span class="you1">
+						<iframe width="350" height="250"
+							src="https://www.youtube.com/embed/jJJiR7nNeqQ?si=q3PzqwmV-etAqbqt"
+							title="YouTube video player" frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen></iframe>
+						<br><a href="" id="program">허리스트레칭</a>
+					</span>
+					<span class="you1">
+						<iframe width="350" height="250"
+							src="https://www.youtube.com/embed/50WCSpZtdmA?si=ac0ey_5-X6Iewabr"
+							title="YouTube video player" frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen></iframe>
+						<br><a href="" id="program">아침스트레칭</a>
+					</span>
+					<span class="you1">
+						<iframe width="350" height="250"
+							src="https://www.youtube.com/embed/ouRBXs-air8?si=qTD9YX9JPMMhJndV"
+							title="YouTube video player" frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen></iframe>
+						<br><a href="" id="program">목 마사지</a>
+					</span>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div id="content_box">
+			<div class="box">
+				<div>
+					<h3>인기상품</h3>
+				</div>
+				<div id="item">
+					<div class="item1"><a href=""><img src="/img/band1.jpg"></a>
+						<div class="item1">멜킨 라텍스 밴드</div>
+						<div>3,800원</div>
+						<div>평점<span>4.8</span>·리뷰<span>30,735</span></div>
+					</div>
+					<div>
+						<div class="item1"><a href=""></a><img src="/img/band2.jpg"></a></div>
+						<div>고무나라 밴드</div>
+						<div>1,800원</div>
+						<div>평점<span>4.7</span>·리뷰<span>22,472</span></div>
+					</div>
+					<div>
+						<div class="item1"><a href=""><img src="/img/band3.jpg"></a></div>
+						<div>이고진 밴드</div>
+						<div>2,100원</div>
+						<div>평점<span>4.7</span>·리뷰<span>8,605</span></div>
+					</div>
+					<div>
+						<div class="item1"><a href=""><img src="/img/band4.jpg"></a></div>
+						<div>테라 밴드</div>
+						<div>9,900원</div>
+						<div>평점<span>4.7</span>·리뷰<span>3,866</span></div>
+					</div>
+					<div>
+						<div class="item1"><a href=""><img src="/img/band5.jpg"></a></div>
+						<div>아이언빅 밴드</div>
+						<div>14,500원</div>
+						<div>평점<span>4.8</span>·리뷰<span>3,962</span></div>
+					</div>
+				</div>
+	</section>
+
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>운동기구-폼롤러</title>
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/post.css">
+        <link rel="stylesheet" href="css/aside.css">
+        <link rel="stylesheet" href="css/goods.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/search.css">
+        <link rel="stylesheet" href="css/videoList.css">
+    </head>
+    <body>
+      	<th:block th:replace="~{/fragments/navbar::navbar}"></th:block>
+       <section class="grid">
+        <article>
+            <div class="aside">
+                <div>
+                    <h1><a href="/sportingGoods">SPORTING GOODS</a></h1>
+                </div>
+                <div >
+                    <ul>
+                        <p><a class="active2" href="/s_FoamRoller" >FOAMROLLER</a></p>
+                        <p> <a href="/s_MassageBall">MASSAGEBALL</a></p>
+                        <p><a href="/s_Band">BAND</a></p>
+                    </ul>
+                </div> 
+            </div>
+        </article>
+        <article> 
+            <div class="listmain"> 
+                <div class="videoList"> 
+                    <span>
+                        <span class="box">
+                            <h3>전체상품</h3>
+                            <span>판매자추천순 | 인기도순 | 평점높은순 | 최신등록순</span>    
+                        </span> 
+                    </span>
+                    <span class="search" style="margin-right: 120px; margin-top: 0px;">
+                        <div class="icon"></div>
+                        <div class="input">
+                            <input type="text" placeholder="Search" id="mySearch">
+                        </div>
+                        <span class="clear" onclick="document.getElementById('mySearch').value = ''"></span>
+                    </span>
+                </div>
+            </div> 
+            <div class="goodslist">
+                <div class="content_box">  
+                    <div class="item">
+                        <div class="item1"><a href="https://smartstore.naver.com/delta1114/products/6969478359?NaPm=ct%3Dlnwzcjfs%7Cci%3D0yW0003fXx1zxwQ%5F3fma%7Ctr%3Dpla%7Chk%3Dcdf4c832e1959bc5dc20a779833768edb07e31dd">
+                        <div><img src="img/foam19.jpg"  alt="폼롤러 사진"></div>
+                            <div>밸런시스EPP 폼롤러</div>
+                            <div>26,900원</div>
+                            <div>평점<span>4.8</span>·리뷰<span>404</span></div>
+                        </a></div>
+                        <div  class="item1"><a href="https://brand.naver.com/iwha/products/8129329791?NaPm=ct%3Dlnx17zog%7Cci%3D3e2c421a4dfe0f71e56fe0ce3dd39fc77ce16b71%7Ctr%3Dsls%7Csn%3D156921%7Chk%3Da41605139221bb69ada6d567887f4e6978a20a50">
+                            <div><img src="img/foam20.jpg" alt="폼롤러 사진"></div>
+                            <div>스포틀러 EPP 폼롤러</div>
+                            <div>16,700원</div>
+                            <div>평점<span>4.9</span>·리뷰<span>920</span></div>
+                        </a></div>
+                        <div  class="item1"><a href="https://smartstore.naver.com/gomunara/products/2541549195?n_media=27758&n_query=%ED%8F%BC%EB%A1%A4%EB%9F%AC&n_rank=1&n_ad_group=grp-a001-02-000000036065806&n_ad=nad-a001-02-000000254133074&n_campaign_type=2&n_mall_id=orientbr1&n_mall_pid=2541549195&n_ad_group_type=2&n_match=3&NaPm=ct%3Dlnx19nv4%7Cci%3D0yK0001E0N5zHvTc6foo%7Ctr%3Dpla%7Chk%3De44a38ab23d62d733725c27265239b3027e102fc">
+                            <div><img src="img/foam21.jpg" alt="폼롤러 사진"></div>
+                            <div>고무나라 EVA 폼롤러</div>
+                            <div>20,500원</div>
+                            <div>평점<span>4.7</span>·리뷰<span>34,323</span></div>
+                        </a></div>
+                        <div  class="item1"><a href="https://smartstore.naver.com/q-ing/products/5101447262?NaPm=ct%3Dlnx1b18w%7Cci%3Dc9bfa273aa16c87bb3ab04b12c56ffd1bc4c37a5%7Ctr%3Dsls%7Csn%3D1782196%7Chk%3Dd3c4b8ceac73cc8dc839d77b2204c79e6163a569">
+                            <div><img src="img/foa22.jpg" alt="폼롤러 사진"></div>
+                            <div>큐잉 EVA 폼롤러 </div>
+                            <div>29,800원</div>
+                            <div>평점<span>4.8</span>·리뷰<span>2,461</span></div>
+                        </a></div>
+                       <div  class="item1"><a href="https://smartstore.naver.com/seveneight/products/2321140625?n_media=27758&n_query=%ED%8F%BC%EB%A1%A4%EB%9F%AC&n_rank=1&n_ad_group=grp-a001-02-000000023675406&n_ad=nad-a001-02-000000155062140&n_campaign_type=2&n_mall_id=ncp_1njws6_01&n_mall_pid=2321140625&n_ad_group_type=2&n_match=3&NaPm=ct%3Dlnx1cfeg%7Cci%3D0ze0003F0N5zwuYV9fpB%7Ctr%3Dpla%7Chk%3D0556879d0539e7e1640d5008ed1eb6308340a45e">
+                            <div><img src="img/foam23.jpg" alt="폼롤러 사진"></div>
+                            <div>코어바디 EVA폼롤러</div>
+                            <div>44,250원</div>
+                            <div>평점<span>4.8</span>·리뷰<span>7,476</span></div>
+                       </a></div>
+                       
+                    </div>                                              
+                </div>
+            </div> 
+            <div class="postPage">
+                <a href="s_FoamRoller.html">1</a>
+                <a href="s_FoamRoller2.html">2</a>
+                <a href="s_FoamRoller3.html">3</a>
+            </div>
+            </div>            
+        </article>
+       </section>
+        <footer>
+            <div class="footer">
+                <ul>
+                    <li>유한대학교 </li>
+                    <li>컴퓨터소프트웨어공학과</li>
+                    <li>컴퓨터소프트웨어전공 </li>
+                    <li>3조</li>
+                    <li>02-2610-0768</li>
+                </ul>
+            </div>
+        </footer>
+        <script src="js/search.js"></script>
+    </body>
+</html>

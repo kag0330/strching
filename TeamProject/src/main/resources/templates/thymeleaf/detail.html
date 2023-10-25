@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <title>상세페이지</title>
-        <link rel="stylesheet" href="css/navbar.css">
+         <th:block th:replace="~{/fragments/header::header}"></th:block>
         <link rel="stylesheet" href="css/post.css">
         <link rel="stylesheet" href="css/aside.css">
         <style>
@@ -22,7 +22,7 @@
         </style>
     </head>
     <body>
-          <nav th:replace="~{/fragments/header::header}"></nav>  
+      	<th:block th:replace="~{/fragments/navbar::navbar}"></th:block>
         <div class="total">
             <div class="detailImg">
                 <img src="img/foam1.jpg" alt="폼롤러 사진">

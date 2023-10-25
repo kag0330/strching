@@ -4,11 +4,10 @@
     <head>
         <meta charset="utf-8">
         <title>마이페이지</title>
-        <link rel="stylesheet" href="css/navbar.css">
+         <th:block th:replace="~{/fragments/header::header}"></th:block>
         <link rel="stylesheet" href="css/post.css">
         <link rel="stylesheet" href="css/aside.css">
         <link rel="stylesheet" href="css/goods.css">
-        <link rel="stylesheet" href="css/footer.css">
         <style>
        #color{
         color: black;
@@ -21,9 +20,7 @@
         </style>
     </head>
     <body>
-        <header>
-            <nav th:replace="~{/fragments/header::header}"></nav>
-        </header>
+     	<th:block th:replace="~{/fragments/navbar::navbar}"></th:block>
         <section class="grid">
             <article>
                 <div class="aside">

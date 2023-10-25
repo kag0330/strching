@@ -4,10 +4,11 @@
     <head>
         <meta charset="utf-8">
         <title>비밀번호 찾기</title> 
+         <th:block th:replace="~{/fragments/header::header}"></th:block>
         <link rel="stylesheet" href="css/finder.css">
     </head>
     <body>
-		 <th:block layout:fragment="header" th:include="/fragments/header"></th:block>
+			<th:block th:replace="~{/fragments/navbar::navbar}"></th:block>
         <span class="finder">
             <h1>비밀번호 찾기</h1>
             <span>

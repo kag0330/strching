@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>게시글</title>
+     <th:block th:replace="~{/fragments/header::header}"></th:block>
     <link rel="stylesheet" href="css/share.css" />
     <link rel="stylesheet" href="css/write-content.css" />
     <link rel="stylesheet" href="css/media.css" />
-    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/post.css">
     <link rel="stylesheet" href="css/aside.css">
   </head>
   <body>
-      <nav th:replace="~{/fragments/header::header}"></nav>  
+     	<th:block th:replace="~{/fragments/navbar::navbar}"></th:block>
     <div class="main-container">
       <div class="main-title">
         <h1>자유게시판</h1>

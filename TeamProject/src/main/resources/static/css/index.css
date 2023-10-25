@@ -9,7 +9,12 @@
     object-fit: cover;
 }
 
-
+.view{
+    background: lightgray;
+    margin-left: 90%;
+    width: 5.5%;
+    
+}
 .item-list{
     display: flex;
     
