@@ -6,39 +6,59 @@ import java.util.List;
 
 import com.stretching.KeyValuePair;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Builder;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
-@Entity
-@Data
+@Getter @ToString
 @NoArgsConstructor
+@Entity
+@Table(name = "YOUTUBE")
 public class Youtube {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer seq;
-	private String title;
+	@Column(name = "URL")
 	private String url;
-	private String iframe_url;
-	private String img_url;
+	
+	@Column(name = "TITLE")
+	private String title;
+	
+	@Column(name = "IFRAME_URL")
+	private String iframeUrl;
+	
+	@Column(name = "IMG_URL")
+	private String imgUrl;
+	
+	@Column(name = "UPLOADER")
 	private String uploader;
+	
+	@Column(name = "TYPE")
 	private String type;
-	private Date upload_date;
-	private int cnt;
+	
+	@Column(name = "UPLOAD_DATE")
+	private Date uploadDate;
+	
+	@Column(name = "CNT")
+	private Long cnt;	
 
-	public List<KeyValuePair> toKeyValuePairs() {
-		List<KeyValuePair> kvp = new ArrayList<>();
-		kvp.add(new KeyValuePair("title", this.title));
-		kvp.add(new KeyValuePair("url", this.url));
-		kvp.add(new KeyValuePair("iframe_url", this.iframe_url));
-		kvp.add(new KeyValuePair("img_url", this.img_url));
-		kvp.add(new KeyValuePair("uploader", this.uploader));
-		return kvp;
+	@Builder
+	public Youtube(String title, String url, String iframeurl, 
+			       String imgurl , String uploader, String type, Date uploadDate, Long cnt) {
+		this.title = title;
+		this.url = url;
+		this.iframeUrl = iframeurl;
+		this.imgUrl = imgurl;
+		this.uploader = uploader;
+		this.type = type;
+		this.uploadDate = uploadDate;
+		this.cnt = cnt;
 	}
 }

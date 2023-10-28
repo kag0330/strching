@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>운동기구-폼롤러</title>
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/post.css">
+        <link rel="stylesheet" href="css/aside.css">
+        <link rel="stylesheet" href="css/goods.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/search.css">
+        <link rel="stylesheet" href="css/videoList.css">
+    </head>
+    <body>
+        <header>
+            <nav th:replace="~{/fragments/header::header}"></nav>  
+        </header>
+        <section class="grid">
+            <article class="asidemenu">
+                <div class="aside">
+                    <div>
+                        <h1><a class="active2" href="/sportingGoods">SPORTING GOODS</a></h1>
+                    </div>
+                    <div >
+                        <ul>
+                            <p><a href="/s_FoamRoller">FOAMROLLER</a></p>
+                            <p> <a href="/s_MassageBall" >MASSAGEBALL</a></p>
+                            <p><a href="/s_Band" >BAND</a></p>
+                        </ul>
+                    </div> 
+                </div>
+            </article>
+            <article class="mainscreen">
+                <div class="listmain"> 
+                    <div class="videoList"> 
+                        <span>
+                            <span class="box">
+                                <h3>전체상품</h3>
+                                <span>판매자추천순 | 인기도순 | 평점높은순 | 최신등록순</span>    
+                            </span> 
+                        </span>
+                        <span class="search" style="margin-right: 120px; margin-top: 0px;">
+                            <div class="icon"></div>
+                            <div class="input">
+                                <input type="text" placeholder="Search" id="mySearch">
+                            </div>
+                            <span class="clear" onclick="document.getElementById('mySearch').value = ''"></span>
+                        </span>
+                    </div>
+                </div>       
+                <div class="goodslist">
+                    <div class="content_box">   
+                            <div class="item">
+                                <div class="item1"><a href="https://brand.naver.com/melkin/products/581152025?NaPm=ct%3Dlnvxt9ls%7Cci%3D6666b640f82987d6fa27708cea567b9b85c9f4e6%7Ctr%3Dsls%7Csn%3D447572%7Chk%3D0ac724ecefb346f353cd6db4021b926b425fc827">
+                                        <div><img src="img/band1.jpg" alt="밴드사진"></div>
+                                        <div>멜킨 라텍스 밴드</div>
+                                        <div>3,800원</div>
+                                        <div>평점<span>4.8</span>·리뷰<span>30,735</span></div>
+                                     </a></div>
+                                     <div class="item1"><a href="https://smartstore.naver.com/wssports/products/8057965078?n_media=27758&n_query=%EC%8A%A4%ED%8F%AC%EC%B8%A0%EB%B0%B4%EB%93%9C&n_rank=2&n_ad_group=grp-a001-02-000000035350254&n_ad=nad-a001-02-000000249303225&n_campaign_type=2&n_mall_id=wssport77&n_mall_pid=8057965078&n_ad_group_type=2&n_match=3&NaPm=ct%3Dlnwwjto0%7Cci%3D0Asc001QT31zcBKYTKYW%7Ctr%3Dpla%7Chk%3D9181491a951057698a9f22dfa046d3b6b1b537dc">
+                                        <div><img src="img/band12.jpg" alt="밴드 사진"></div>
+                                        <div>아리프 밴드 세트</div>
+                                        <div>19,800원</div>
+                                        <div>평점<span>4.8</span>·리뷰<span>49</span></div>
+                                     </a></div>
+                                    <div class="item1"><a href="https://brand.naver.com/egojin/products/4416974283?n_media=27758&n_query=%EC%8A%A4%ED%8F%AC%EC%B8%A0%EB%B0%B4%EB%93%9C&n_rank=2&n_ad_group=grp-a001-02-000000011530051&n_ad=nad-a001-02-000000075879667&n_campaign_type=2&n_mall_id=egojin&n_mall_pid=4416974283&n_ad_group_type=2&n_match=3&NaPm=ct%3Dlnwwr38o%7Cci%3D0yS00039Th1zeF8V3f3x%7Ctr%3Dpla%7Chk%3Df16de6a71b77768ae7af6101a7d6b4ff87599c6a">
+                                        <div><img src="img/band13.jpg" alt="밴드 사진"></div>
+                                        <div>이고진 푸쉬업 밴드</div>
+                                        <div>7,600원</div>
+                                        <div>평점<span>4.6</span>·리뷰<span>11</span></div>
+                                     </a></div>
+                                     <div class="item1"><a href="https://smartstore.naver.com/finisports/products/422628231?NaPm=ct%3Dlnvy49fs%7Cci%3Dd61c8b1e6d941858121cf57d36d7d343b7af4c6c%7Ctr%3Dsls%7Csn%3D188274%7Chk%3D3646388c48a812d187ad598ce3a3ffb737b42fd9">
+	                                <div><img src="img/ball1.jpg" alt="마사지 볼 사진"></div>
+	                                <div>와두 마사지 볼</div>
+	                                <div>5,500원</div>
+	                                <div>평점<span>4.8</span>·리뷰<span>1,248</span></div>
+		                            </a></div>
+		                            <div class="item1"><a href="https://brand.naver.com/melkin/products/2776148060?NaPm=ct%3Dlnvy4ls8%7Cci%3De304036a7fa42bc49aa2865a82a70e0e274cba65%7Ctr%3Dsls%7Csn%3D447572%7Chk%3D5245943455bb51212d821156315c21c2bceee305">
+		                                <div><img src="img/ball2.jpg"  alt="마사지 볼 사진"></div>
+		                                <div>멜킨스포츠 마사지 볼</div>
+		                                <div>3,700원</div>
+		                                <div>평점<span>4.8</span>·리뷰<span>3,344</span></div>
+		                            </a></div>
+		                            <div class="item1"><a href="https://smartstore.naver.com/wssports/products/8339881035?n_media=27758&n_query=%EB%A7%88%EC%82%AC%EC%A7%80%EB%B3%BC&n_rank=1&n_ad_group=grp-a001-02-000000034781840&n_ad=nad-a001-02-000000245359726&n_campaign_type=2&n_mall_id=wssport77&n_mall_pid=8339881035&n_ad_group_type=2&n_match=3&NaPm=ct%3Dlnvy54aw%7Cci%3D0Bcc002P0x1zDFQpXKXz%7Ctr%3Dpla%7Chk%3Dc7020334dc64030030cca89ac2a17f6b8ca51e90">
+		                                <div><img src="img/ball3.jpg"  alt="마사지 볼 사진"></div>
+		                                <div>아리프 마사지 볼</div>
+		                                <div>8,400원</div>
+		                                <div>평점<span>4.8</span>·리뷰<span>782</span></div>
+		                            </a></div>
+		                            <div class="item1"><a href="https://brand.naver.com/andar/products/5670172853">
+		                                <div><img src="img/ball4.jpg"  alt="마사지 볼 사진"></div>
+		                                <div>안다르 마사지 볼</div>
+		                                <div>9,900원</div>
+		                                <div>평점<span>4.7</span>·리뷰<span>8,514</span></div>
+		                            </a></div>
+		                           <div class="item1"><a href="https://brand.naver.com/naumon/products/3961252606?NaPm=ct%3Dlnvy6yns%7Cci%3Daa17506026869dbb37cb423f9466eed021ef1faf%7Ctr%3Dsls%7Csn%3D311562%7Chk%3D198f6bae6dbf452f3ba466d61cb6bb9687b691c2">
+		                                <div><img src="img/ball5.jpg"  alt="마사지 볼 사진"></div>
+		                                <div>트리거포인트 마사지 볼</div>
+		                                <div>18,800원</div>
+		                                <div>평점<span>4.8</span>·리뷰<span>2,710</span></div>
+		                           </a></div>
+		                           <div class="item1"><a href="https://smartstore.naver.com/gomunara/products/2205621865?NaPm=ct%3Dlnvxtl6g%7Cci%3D2409811fbab08b9884eac5c267fe13c8f0818f6d%7Ctr%3Dsls%7Csn%3D209666%7Chk%3Dbb71b98e173815f06fa89bd0f93a129cc06e7ea9">
+		                                 <div></a><img src="img/band2.jpg" alt="밴드 사진"></div>
+		                                 <div>고무나라 밴드</div>
+		                                 <div>1,800원</div>
+		                                 <div>평점<span>4.7</span>·리뷰<span>22,472</span></div>
+		                             </a></div>
+                            </div>                                              
+                        </div>
+                        <div class="postPage">
+                            <a href="sportingGoods.html">1</a>
+                            <a href="sportingGoods2.html">2</a>
+                            <a href="sportingGoods3.html">3</a>
+                            <a href="sportingGoods4.html">4</a>
+                            <a href="sportingGoods5.html">5</a>
+                        </div>
+                    </div> 
+            </article>
+        </section>
+        <footer>
+            <div class="footer">
+                <ul>
+                    <li>유한대학교 </li>
+                    <li>컴퓨터소프트웨어공학과</li>
+                    <li>컴퓨터소프트웨어전공 </li>
+                    <li>3조</li>
+                    <li>02-2610-0768</li>
+                </ul>
+            </div>
+        </footer>
+        <script src="js/search.js"></script>
+    </body>
+</html>

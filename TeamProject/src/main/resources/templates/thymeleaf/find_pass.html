@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>비밀번호 찾기</title> 
+         <th:block th:replace="~{/fragments/header::header}"></th:block>
+        <link rel="stylesheet" href="css/finder.css">
+    </head>
+    <body>
+			<th:block th:replace="~{/fragments/navbar::navbar}"></th:block>
+        <span class="finder">
+            <h1>비밀번호 찾기</h1>
+            <span>
+                <input class="input input-id" type="text" placeholder="아이디" required><br>
+                <input class="input input-name" type="text" placeholder="이름" required><br>
+                <input class="input input-tel" type="text" placeholder="전화번호" required>
+                <input  class="certification" type="button" value="인증번호 받기"><br>
+                <input class="input input-certificartion" type="text" placeholder="인증번호 입력" required>
+                <input class="finder-button" type="submit" value="확인">  
+            </span>
+        </span>
+    </body>
+</html>

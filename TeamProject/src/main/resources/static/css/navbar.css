@@ -1,17 +1,56 @@
-body {
+
+*{
+    padding: 0;
     margin: 0;
-    
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    width: 1450px; /* 전체 페이지의 너비를 1450픽셀로 설정 */
+    margin: 0 auto; /* 페이지를 중앙 정렬하는 데 도움 */
 }
 a{
     text-decoration: none;
-    color: white;
-}
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #000000;
-    padding: 20px 15px;
-    list-style: none; 
+    color: black;
 }
 
+nav{
+    height: 80px;
+    width: 100%;
+    background: #EBEDF2;
+}
+label.logo{
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    padding: 0 100px;
+    line-height: 80px;
+}
+nav ul{
+    float: right;
+    margin-right: 40px;
+}
+nav li{
+    display: inline-block;
+    margin: 0 10px;
+    line-height: 80px;
+}
+
+nav a{
+    color: black;
+    font-size: 17px;
+    text-transform: uppercase;
+    border: 1px solid black transparent;
+    border-radius: 3px;
+    padding: 7px 10px;
+}
+.navbar a.active, a:hover{
+    border: 1px solid black;
+    transition: .5s;
+}
+.box{
+		border : 1px solid black;
+		}
+box{
+		border : 1px solid black;
+		}

@@ -1,28 +1,33 @@
 package com.stretching.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
 import java.util.List;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 
-import com.stretching.entity.Youtube;
+import com.stretching.dto.YoutubeDto;
 import com.stretching.service.YoutubeService;
 
 @Controller
 public class ProgramController {
+	
+	@Autowired
+	private YoutubeService youtubeService;
 
 	@GetMapping("/program")
 	public String program(Model model) {
-		YoutubeService ys = new YoutubeService();
-		List<String> lists = ys.select_all();
-		System.out.println(lists);
-		model.addAttribute("lists", lists);
+		List<YoutubeDto> youtubeList = youtubeService.YoutubeListPrint();
+		model.addAttribute("lists", youtubeList);
+		System.out.println(youtubeList.toString());
 		return "program";
 	}
-	@GetMapping("/login")
-	public String logn() {
-		return "login";
+
+	@GetMapping("/youtubeview")
+	public String youtubeview() {
+		return "youtubeview";
 	}
+
 }

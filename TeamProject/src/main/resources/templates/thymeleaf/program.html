@@ -4,23 +4,23 @@
 <head>
 	<meta charset="utf-8">
 	<title>프로그램</title>
-	<link rel="stylesheet" href="css/navbar.css">
+	 <th:block th:replace="~{/fragments/header::header}"></th:block>
 	<link rel="stylesheet" href="css/post.css">
 	<link rel="stylesheet" href="css/aside.css">
 </head>
 
 <body>
-	<nav th:replace="~{/fragments/header::header}"></nav>
+	<th:block th:replace="~{/fragments/navbar::navbar}"></th:block>
 	<div id="grid">
 		<div class="aside">
 			<div>
-				<h1><a href="program.html" id="program">프로그램</a></h1>
+				<h1><a href="/program">프로그램</a></h1>
 			</div>
 			<div>
 				<ul>
-					<p><a href="p_Stretching.html" id="program">스트레칭</a></p>
-					<p> <a href="p_Massage.html" id="program">마사지</a></p>
-					<p><a href="p_CorrectionalExercise.html" id="program">교정운동</a></p>
+					<p><a href="/p_Stretching" >스트레칭</a></p>
+					<p> <a href="/p_Massage" >마사지</a></p>
+					<p><a href="/p_CorrectionalExercise">교정운동</a></p>
 				</ul>
 			</div>
 
@@ -44,7 +44,7 @@
 
 				<div>
 					<span class="you1" th:each="list: ${lists}">
-						<iframe width="350" height="250" th:src="${list.iframe_url}" title="YouTube video player"
+						<iframe width="350" height="250" th:src="${list.iframeUrl}" title="YouTube video player"
 							frameborder="0"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 							allowfullscreen>aaa</iframe>
@@ -65,7 +65,7 @@
 				</div>
 			</div>
 		</div>
-
+<th:block th:replace="~{/fragments/footer::footer}"></th:block>
 </body>
 
 </html>

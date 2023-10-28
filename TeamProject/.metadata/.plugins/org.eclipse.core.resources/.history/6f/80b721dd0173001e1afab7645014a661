@@ -1,0 +1,39 @@
+.main{
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 61px);
+}
+.main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.view{
+    background: lightgray;
+    border: 0px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #f8f8f8;
+    height: 39px;
+    margin: 14px 0 0;
+    width: 10%;
+}
+.item-list{
+    display: flex;
+    
+}
+#youtube{
+    display: flex;
+}
+.item-list>div {
+width: 15%;
+height: auto;
+}
+.item-list img {
+width: 100%;
+}
+.recently-item{
+    width: 220px;
+    height: 220px;
+}
