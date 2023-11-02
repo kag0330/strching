@@ -35,7 +35,7 @@ $(document).ready(function() {
 function loadFileData($element) {
 	const filename = $element.data("filename");
 
-	fetch('json/' + filename)
+	fetch('/json/' + filename)
 		.then(response => response.json())
 		.then(data => {
 			const $tableBody = $("#dataTable tbody");
@@ -98,15 +98,13 @@ function submitSelectedData() {
 					case 5:
 						rowData.uploader = $(cell).text();
 						break;
-					//case 6:
-					//	rowData.type = $(cell).text();
-					//	break;
+					case 6:
+						rowData.type = $(cell).text();
+						break;
 					case 7:
-						// DBUpload의 경우, 선택한 옵션 값을 가져옵니다.
 						rowData.DBUpload = $(cell).find('select').val();
 						break;
 					case 8:
-						// checkbox는 이미 체크 여부로 확인했으므로 이 경우를 무시합니다.
 						break;
 					default:
 						break;
@@ -118,12 +116,13 @@ function submitSelectedData() {
 
 	// 서버에 데이터 전송
 	$.ajax({
-		url: '/admin_youtubeDBUpload_ok', // API 엔드포인트
+		url: '/admin/youtubeDBUpload_ok', // API 엔드포인트
 		method: 'POST',
 		contentType: 'application/json',
 		data: JSON.stringify(selectedItems),
 		success: function(response) {
 			alert("Data uploaded successfully!");
+			location.replace('/')
 		},
 		error: function() {
 			alert("Error occurred while uploading data.");

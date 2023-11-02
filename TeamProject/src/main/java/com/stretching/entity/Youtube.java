@@ -1,10 +1,7 @@
 package com.stretching.entity;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
-import com.stretching.KeyValuePair;
+import java.util.Date;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -12,24 +9,28 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.TableGenerator;
 import lombok.Builder;
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import lombok.ToString;
 
 @Getter @ToString
 @NoArgsConstructor
 @Entity
 @Table(name = "YOUTUBE")
+
 public class Youtube {
-	@Id
-	@Column(name = "URL")
-	private String url;
+	@Column(name = "SEQ")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long seq;
 	
 	@Column(name = "TITLE")
 	private String title;
+	
+	@Id
+	@Column(name = "URL")
+	private String url;
 	
 	@Column(name = "IFRAME_URL")
 	private String iframeUrl;
@@ -50,8 +51,9 @@ public class Youtube {
 	private Long cnt;	
 
 	@Builder
-	public Youtube(String title, String url, String iframeurl, 
+	public Youtube(Long seq, String title, String url, String iframeurl, 
 			       String imgurl , String uploader, String type, Date uploadDate, Long cnt) {
+		this.seq = seq;
 		this.title = title;
 		this.url = url;
 		this.iframeUrl = iframeurl;
@@ -60,5 +62,9 @@ public class Youtube {
 		this.type = type;
 		this.uploadDate = uploadDate;
 		this.cnt = cnt;
+	}
+
+	public void incrementCnt() {
+		this.cnt++;
 	}
 }

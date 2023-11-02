@@ -1,12 +1,19 @@
 <html xmlns:th="http://www.thymeleaf.org">
-		<nav class="navbar" th:fragment="navbar">
-		<label class="logo"><span OnClick="location.href='/'" style="cursor:pointer">STRETCHING</span></label>
-                <ul>
-                    <li><a href="/">HOME</a></li>
-                    <li><a href="/program">PROGRAM</a></li>
-                    <li><a href="/messageBoard">BULLETIN BOARD</a></li>
-                    <li><a href="/sportingGoods">SPORTING GOODS</a></li>
-                    <li><a href="/signin">LOGIN</a></li>
-                </ul>
-            </nav>  
+<nav class="navbar" th:fragment="navbar">
+	<label class="logo"><span OnClick="location.href='/'" style="cursor:pointer">STRETCHING</span></label>
+	<ul>
+		<li><a href="/">HOME</a></li>
+		<li><a href="/program">PROGRAM</a></li>
+		<li><a href="/messageBoard">BULLETIN BOARD</a></li>
+		<li><a href="/sportingGoods">SPORTING GOODS</a></li>
+		<th:block th:if="${#strings.isEmpty(loginUser) }">
+			<li><a href="/signin">LOGIN</a></li>
+		</th:block>
+		<th:block th:if="${not #strings.isEmpty(loginUser)}">
+				<li><a th:text="${loginUser}" th:href="@{/myPage}"></a></span></li>
+				<li><a th:text="logout" th:href="@{/logout}"></a></span></li>
+		</th:block>
+
+	</ul>
+</nav>
 </html>

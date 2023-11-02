@@ -1,7 +1,5 @@
 package com.stretching.dto;
 
-import org.springframework.security.crypto.password.PasswordEncoder;
-
 import com.stretching.entity.User;
 import com.stretching.role.UserRole;
 
@@ -31,11 +29,20 @@ public class UserDto {
 	
 	public User toEntity() {
 		return User.builder()
-				.id(id)
-				.pw(pw)
-				.name(name)
-				.phone(phone)
-				.role(role)
+				.id(this.id)
+				.pw(this.pw)
+				.name(this.name)
+				.phone(this.phone)
+				.role(UserRole.USER)
+				.build();
+	}
+	public User toEntity(String encodePassword) {
+		return User.builder()
+				.id(this.id)
+				.pw(encodePassword)
+				.name(this.name)
+				.phone(this.phone)
+				.role(UserRole.USER)
 				.build();
 	}
 

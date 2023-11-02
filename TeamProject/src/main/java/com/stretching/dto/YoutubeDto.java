@@ -5,13 +5,14 @@ import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.stretching.entity.Youtube;
 
-import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
 @Getter @Setter @ToString
 public class YoutubeDto {
+	
+	private Long seq;
 	
 	private String title;
 	
@@ -36,6 +37,7 @@ public class YoutubeDto {
 	}
 	
 	public YoutubeDto(Youtube entity) {
+		this.seq = entity.getSeq();
 		this.title = entity.getTitle();
 		this.url = entity.getUrl();
 		this.iframeUrl = entity.getIframeUrl();
@@ -48,26 +50,30 @@ public class YoutubeDto {
 	
 	public Youtube toEntity() {
 		return Youtube.builder()
-				.title(title)
-				.url(url)
-				.iframeurl(iframeUrl)
-				.imgurl(imgUrl)
-				.uploader(uploader)
-				.type(type)
-				.uploadDate(uploadDate)
-				.cnt(cnt)
+//				.seq(this.seq)
+				.title(this.title)
+				.url(this.url)
+				.iframeurl(this.iframeUrl)
+				.imgurl(this.imgUrl)
+				.uploader(this.uploader)
+				.type(this.type)
+				.uploadDate(new Date())
+				.cnt(0L)
 				.build();
 	}
-	@Builder
-	public YoutubeDto(String title, String url, String iframeurl, 
-			       String imgurl , String uploader, String type, Date uploadDate, Long cnt) {
-		this.title = title;
-		this.url = url;
-		this.iframeUrl = iframeurl;
-		this.imgUrl = imgurl;
-		this.uploader = uploader;
-		this.type = type;
-		this.uploadDate = uploadDate;
-		this.cnt = cnt;
+	
+	public Youtube toEntity(Long seq) {
+		return Youtube.builder()
+				.seq(seq)
+				.title(this.title)
+				.url(this.url)
+				.iframeurl(this.iframeUrl)
+				.imgurl(this.imgUrl)
+				.uploader(this.uploader)
+				.type(this.type)
+				.uploadDate(new Date())
+				.cnt(0L)
+				.build();
 	}
+	
 }
