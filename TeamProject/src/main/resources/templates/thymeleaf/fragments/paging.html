@@ -1,0 +1,27 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<nav>
+	<ui th:fragment="paging" class="pagination justify-content-center">
+		<li>
+			<a th:href="@{/program(page=1)}">처음</a>
+		</li>
+		<li>
+			<a th:href="${youtubePages.isFirst()} ? '#' : @{/program(page=${youtubePages.getNumber()})}">이전</a>
+		</li>
+
+		<th:block th:each="page: ${#numbers.sequence(startPage, endPage)}">
+			<li th:if="${page == youtubePages.number + 1}" th:text="${page}"></li>
+			<li th:unless="${page == youtubePages.number + 1}">
+				<a th:href="@{/program(page=${page})}" th:text="${page}"></a>
+				</span>
+		</th:block>
+		<li>
+			<a th:href="${youtubePages.isLast()} ? '#' : @{/program(page=${youtubePages.number + 2})}">다음</a>
+		</li>
+		<li>
+			<a th:href="@{/program(page=${youtubePages.getTotalPages()})}">끝</a>
+		</li>
+
+	</ui>
+</nav>
+
+</html>

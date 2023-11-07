@@ -10,8 +10,15 @@
         <link rel="stylesheet" href="css/goods.css">
         <link rel="stylesheet" href="css/search.css">
         <link rel="stylesheet" href="css/videoList.css">
+         <style>
+		.box {
+		border: 1px solid black;
+		}
+</style>
+
     </head>
     <body>
+		<div class="box">
        	<th:block th:replace="~{/fragments/navbar::navbar}"></th:block>
         <section class="grid">
             <article class="asidemenu">
@@ -32,7 +39,7 @@
                 <div class="listmain"> 
                     <div class="videoList"> 
                         <span>
-                            <span class="box">
+                            <span>
                                 <h3>전체상품</h3>
                                 <span>판매자추천순 | 인기도순 | 평점높은순 | 최신등록순</span>    
                             </span> 

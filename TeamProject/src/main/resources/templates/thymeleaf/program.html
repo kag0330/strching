@@ -4,68 +4,63 @@
 <head>
 	<meta charset="utf-8">
 	<title>프로그램</title>
-	 <th:block th:replace="~{/fragments/header::header}"></th:block>
+	<th:block th:replace="~{/fragments/header::header}"></th:block>
 	<link rel="stylesheet" href="css/post.css">
 	<link rel="stylesheet" href="css/aside.css">
+	<link rel="stylesheet" href="/css/paging.css">
+	<link rel="stylesheet" href="/css/common.css">
+	  <style>
+			.box {
+			border: 1px solid black;
+				}
+		</style>
 </head>
 
-<body>
+<body class="progarm">
+	<div class="box">
 	<th:block th:replace="~{/fragments/navbar::navbar}"></th:block>
-	<div id="grid">
-		<div class="aside">
-			<div>
-				<h1><a href="/program">프로그램</a></h1>
-			</div>
-			<div>
-				<ul>
-					<p><a href="/p_Stretching" >스트레칭</a></p>
-					<p> <a href="/p_Massage" >마사지</a></p>
-					<p><a href="/p_CorrectionalExercise">교정운동</a></p>
-				</ul>
-			</div>
-
-		</div>
-		<div class="main">
-			<div class="dropDown">
-				<div>
-					<div class="top">
-						<select name="" id="">
-							<option value="">검색선택</option>
-							<option value="">제목</option>
-							<option value="">최신순</option>
-							<option value="">인기순</option>
-						</select>
-
-						<input type="text" maxlength="100">
-						<input type="submit" value="검색">
-						<input type="button" value="초기화">
-					</div>
+	<div>
+		<div class="vrow column head d-none d-md-fiex">
+			<div class="vrow-inner">
+				<div class="vrow-top">
+					<span class="vcol col-id">번호</span>
+					<span class="vcol col-img">이미지</span>
+					<span class="vcol col-title">제목</span>
 				</div>
-
-				<div>
-					<span class="you1" th:each="list: ${lists}">
-						<iframe width="350" height="250" th:src="${list.iframe_url}" title="YouTube video player"
-							frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-							allowfullscreen>aaa</iframe>
-						<div>
-							<span th:text="${list.title}"></span><br>
-							<span th:text="${list.uploader}"></span>
-						</div>
-
-
+				<div class="vrow-bottom">
+					<span class="vcol col-rate">추천</span>
+					<span class="vcol col-time">작성일</span>
+					<span class="vcol col-view">조회수</span>
+				</div>
+			</div>
+		</div>
+		<a th:each="youtube : ${youtubePages}" th:href="@{/youtubeview/{seq}(seq = ${youtube.seq})}"
+			class="vrow column">
+			<div class="vrow-inner">
+				<div class="vrow-top">
+					<span th:text="${youtube.seq}" class="vcol col-id">seq</span>
+					<span class="vcol col-img">
+						<img th:src="${youtube.imgUrl}" class="vcol col-img-img">
 					</span>
+
+					<span class="vcol col-title" th:text="${youtube.title}">title</span>
 				</div>
-				<div class="postPage">
-					<a href="">1</a>
-					<a href="">2</a>
-					<a href="">3</a>
-					<a href="">4</a>
-					<a href="">5</a>
+				<div class="vrow-bottom" th:with="youtubeDay = ${#dates.format(youtube.uploadDate, 'yyyy.MM.dd')}">
+					<span class="vcol col-rate">추천표시</span>
+					<th:block th:if="${#strings.equals(youtubeDay, today)}">
+						<span class="vcol col-time" th:text="${#dates.format(youtube.uploadDate, 'HH:mm')}"></span>
+					</th:block>
+					<th:block th:unless="${#strings.equals(youtubeDay, today)}">
+						<span class="vcol col-time" th:text="${youtubeDay}"></span>
+					</th:block>
+
+					<span class="vcol col-view" th:text="${youtube.cnt}">cnt</span>
 				</div>
 			</div>
-		</div>
-<th:block th:replace="~{/fragments/footer::footer}"></th:block>
+		</a>
+	</div>
+	<th:block th:replace="~{/fragments/paging::paging}"></th:block>
+	<th:block th:replace="~{/fragments/footer::footer}"></th:block>
 </body>
 
 </html>

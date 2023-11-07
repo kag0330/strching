@@ -1,6 +1,9 @@
 #서버 설정
 server:
   port: 8085
+  servlet:
+    session:
+      timeout: 1800
 
 # thymeleaf 설정
 spring:
@@ -10,14 +13,17 @@ spring:
     suffix: .html
     cache: false
     
-  #devtools 설정
-  devtools:
-    livereload:
-      enabled: true
-    restart:
-      enabled: true
-  freemarker:
-    cache: false
+  jpa:
+    database: mysql
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        "[format_sql]": true
+      
+  
     
     
 #DB 설정

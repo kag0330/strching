@@ -1,71 +1,65 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<html>   
+<html>
 
 <head>
 	<meta charset="utf-8">
 	<title>영상</title>
 	<th:block th:replace="~{/fragments/header::header}"></th:block>
-	 <link rel="stylesheet" href="css/youtubeview.css">
-	</head>
-	<style>
-		.box{
-		border : 1px solid black;
-		}
-	</style>
+	<link rel="stylesheet" href="/css/youtubeview.css">
+</head>
+<style>
+	.box {
+		border: 1px solid black;
+	}
+</style>
+
 <body>
+	<th:block th:replace="~{/fragments/navbar::navbar}"></th:block>
 	<div class="box">
-   <th:block th:replace="~{/fragments/navbar::navbar}"></th:block>	
-	
-
-
-  <div class="center">
-    <!-- Video Player -->
-    <section class="player">
-        <div>
-				<span class="you1">
-						<iframe width="1300" height="700"
-							src="https://www.youtube.com/embed/jJJiR7nNeqQ?si=q3PzqwmV-etAqbqt"
-							title="YouTube video player" frameborder="0"
+		<div class="center">
+			<!-- Video Player -->
+			<section class="player">
+				<div>
+					<span class="you1">
+						<iframe width="1300" height="700" th:src="${youtube.iframeUrl}" title="YouTube video player"
+							frameborder="0"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 							allowfullscreen></iframe>
 					</span>
 				</div>
-    </section>
+			</section>
 
-    <section class="info">
-      <div class="metadata">
-        <div class="titleAndButton">
-          <span class="title clamp">
-            제목제목제목제목
-        </span>
-      <!-- Actions -->
-        <ul class="actions">
-          <li><button><span><img src="img/good.jpg" width="20"></span>좋아요</button></li>
-          <li><button><span><img src="img/bad.jpg" width="20"></span>싫어요</button></li>
-        </ul>
-        </div>
-        </div>
-     
-      <!-- Channel Description -->
-      <div class="channel">
-        <div class="metadata">      
-          <div class="info">
-              <span class="name">안민수</span>
-              <span class="subscribers">2K subscribers</span>
-          </div>
-        </div>
-        <button class="subscribe">subscribe</button>
-      </div>
-    	<th:block th:replace="~{/fragments/footer::footer}"></th:block>
-    </section>
+			<section class="info">
+				<div class="metadata">
+					<div class="titleAndButton">
+						<span class="title clamp" th:text="${youtube.title}">제목제목제목제목</span>
+						<!-- Actions -->
+						<ul class="actions">
+							<li><button><span><img src="/img/good.jpg" width="20"></span>좋아요</button></li>
+							<li><button><span><img src="/img/bad.jpg" width="20"></span>싫어요</button></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Channel Description -->
+				<div class="channel">
+					<div class="metadata">
+						<div class="info">
+							<span class="name" th:text="${youtube.uploader}">안민수</span>
+						</div>
+					</div>
+					<button class="subscribe">즐겨찾기</button>
+				</div>
+				<th:block th:replace="~{/fragments/footer::footer}"></th:block>
+			</section>
+
+		</div>
 
 	</div>
-		
-	</div>
-	
-	
-		
+
+
+
 </body>
-	
+
 </html>
