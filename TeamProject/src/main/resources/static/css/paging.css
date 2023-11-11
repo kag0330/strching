@@ -89,3 +89,19 @@
 	display:flex;
 	flex-direction: column;
 }
+.div-search{
+	display: flex;
+	padding: 1rem;
+}
+.d-flex {
+	width: 50%;
+	display: flex!important;
+}
+.btn-outline-success {
+	color: #28a745;
+	border-color: #28a745;
+	width: 5rem;
+}
+.justify-content-center {
+	justify-content: center!important
+}

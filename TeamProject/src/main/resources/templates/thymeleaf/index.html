@@ -61,9 +61,9 @@
 			</div>
 			<div id="youtube">
 				<span class="you1">
-					<a th:each="num : ${#numbers.sequence(0,3)}" th:href="@{/youtubeview/{seq}(seq = ${lists[num].seq})}">
-						<img th:src="${lists[num].imgUrl}" width="350" height="250">
-						<!--<span th:text="${lists[num].title}"></span>-->
+					<a th:each="num : ${#numbers.sequence(0,3)}" th:href="@{/youtubeview/{seq}(seq = ${listsDate[num].seq})}">
+						<img th:src="${listsDate[num].imgUrl}" width="350" height="250">
+						<!--<span th:text="${listsDate[num].title}"></span>-->
 					</a>
 				</span>
 	</section>
@@ -71,38 +71,15 @@
 		<div id="content_box">
 			<div>
 				<h3>인기영상</h3>
+			<h3 class="view"><a href="/program">전체보기</a></h3>
 			</div>
 			<div id="youtube">
 				<span class="you1">
-					<iframe width="350" height="250" src="https://www.youtube.com/embed/nOGT4lXlSHw?si=g2eN0h7FYctSGFMe"
-						title="YouTube video player" frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						allowfullscreen style="margin-left:18px"></iframe>
-					<br><a href="" id="program">전신스트레칭</a>
+					<a th:each="num : ${#numbers.sequence(0,3)}" th:href="@{/youtubeview/{seq}(seq = ${listsCnt[num].seq})}">
+						<img th:src="${listsCnt[num].imgUrl}" width="350" height="250">
+						<!--<span th:text="${listsDate[num].title}"></span>-->
+					</a>
 				</span>
-				<span class="you1">
-					<iframe width="350" height="250" src="https://www.youtube.com/embed/jJJiR7nNeqQ?si=q3PzqwmV-etAqbqt"
-						title="YouTube video player" frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						allowfullscreen></iframe>
-					<br><a href="" id="program">허리스트레칭</a>
-				</span>
-				<span class="you1">
-					<iframe width="350" height="250" src="https://www.youtube.com/embed/50WCSpZtdmA?si=ac0ey_5-X6Iewabr"
-						title="YouTube video player" frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						allowfullscreen></iframe>
-					<br><a href="" id="program">아침스트레칭</a>
-				</span>
-				<span class="you1">
-					<iframe width="350" height="250" src="https://www.youtube.com/embed/ouRBXs-air8?si=qTD9YX9JPMMhJndV"
-						title="YouTube video player" frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						allowfullscreen></iframe>
-					<br><a href="" id="program">목 마사지</a>
-				</span>
-			</div>
-		</div>
 	</section>
 	<section>
 		<div id="content_box">

@@ -34,6 +34,7 @@ public class SecurityConfig {
 		http.csrf().disable()
 			.authorizeHttpRequests()
 			.requestMatchers("/myPage").authenticated()
+			.requestMatchers("/myPage/**").authenticated()
 			.requestMatchers("/admin/**").hasAuthority(UserRole.ADMIN.name())
 			.anyRequest().permitAll()
 		.and()

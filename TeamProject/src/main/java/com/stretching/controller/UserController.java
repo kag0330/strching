@@ -1,10 +1,57 @@
 package com.stretching.controller;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.stretching.dto.YoutubeDto;
+import com.stretching.entity.User;
+import com.stretching.service.UserService;
+import com.stretching.service.YoutubeService;
+
+
 
 @Controller
+@RequestMapping(value = "/myPage")
 public class UserController {
-	/**
-	 * 마이페이지, 북마크(즐겨찾기), 추가
-	 * */
+	@Autowired
+	private YoutubeService youtubeService;
+	@Autowired
+	private UserService userService;
+	
+	@GetMapping("/bookmark")
+	public String bookmark(@PageableDefault(page = 1) Pageable pageable, Model model, Authentication auth) {
+	    if (auth != null) {
+	        User loginUser = userService.getLoginUser(auth.getName());
+	        if (loginUser != null) {
+	            // 서비스 메소드 호출하여 Page<YoutubeDto>를 받아옴
+	            Page<YoutubeDto> youtubePages = youtubeService.pagingUserBookmark(pageable, loginUser);
+	            System.out.println(youtubePages.toString());
+	            // 기존의 코드에서 youtubePages를 사용하던 부분을 수정
+	            int blockLimit = 3;
+	            int startPage = ((int) Math.ceil(((double) youtubePages.getNumber() + 1) / blockLimit));
+	            int endPage = Math.min((startPage + blockLimit - 1), youtubePages.getTotalPages());
+	            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy.MM.dd");
+	            String today = LocalDate.now().format(formatter);
+
+	            model.addAttribute("loginUser", loginUser.getId());
+	            model.addAttribute("youtubePages", youtubePages);
+	            model.addAttribute("startPage", startPage);
+	            model.addAttribute("endPage", endPage);
+	            model.addAttribute("today", today);
+	        }
+	    }
+	    return "myPage/bookmark";
+	}
+
 }

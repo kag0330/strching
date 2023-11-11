@@ -49,7 +49,8 @@
 							<span class="name" th:text="${youtube.uploader}">안민수</span>
 						</div>
 					</div>
-					<button class="subscribe">즐겨찾기</button>
+					<button class="subscribe" onclick="bookmark()">즐겨찾기</button>
+					<img id ="bookmarkImg">
 				</div>
 				<th:block th:replace="~{/fragments/footer::footer}"></th:block>
 			</section>
@@ -58,8 +59,56 @@
 
 	</div>
 
-
-
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script th:inline="javascript">
+		/*<![CDATA[*/
+		var seq = /*[[ ${youtube.seq} ]]*/ "";
+		$(document).ready(function () {
+        checkBookmark();
+    });
+    
+		function bookmark() {
+			$.ajax({
+				url			: "/bookmark",
+				type		: "POST",
+				data		: {seq : seq},
+				success: function(data){
+					if(data != "OK"){
+						alert(data);
+					}
+				},
+				error: function(){
+					alert('error');
+				}
+			});
+			changeImg();
+		}
+		function checkBookmark(){
+			$.ajax({
+				url			: "/checkBookmark",
+				type		: "POST",
+				data		: {seq : seq},
+				success: function(bool){
+					if(bool == true){
+						$("#bookmarkImg").attr("src", "/img/bookmark_added.png");
+					}else if(bool == false){
+						$("#bookmarkImg").attr("src", "/img/bookmark.png")
+					}
+				}
+			});
+		}
+		function changeImg(){
+			var defaultImg = document.getElementById("bookmarkImg").src;
+			var defaultSrc = "https://kag0330.duckdns.org/img/bookmark.png"
+			console.log(defaultImg)
+			if(defaultImg == defaultSrc){
+				$("#bookmarkImg").attr("src", "/img/bookmark_added.png");
+			}else{
+				$("#bookmarkImg").attr("src", "/img/bookmark.png")
+			}
+		}
+		/*]]>*/
+	</script>
 </body>
 
 </html>

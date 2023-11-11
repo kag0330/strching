@@ -31,23 +31,7 @@ import jakarta.servlet.http.HttpSession;
 public class LoginController {
 	@Autowired
 	private UserService userService;
-	@Autowired
-	private YoutubeService youtubeService;
 
-	
-	@GetMapping(value={"", "/"})
-	public String index(Model model, Authentication auth) {
-		auth = SecurityContextHolder.getContext().getAuthentication();
-		if(auth != null) {
-			User user = userService.getLoginUser(auth.getName());
-			if(user != null) {
-				model.addAttribute("loginUser", user.getId());
-			}
-		}
-		List<YoutubeDto> youtubeList = youtubeService.YoutubeListPrint();
-		model.addAttribute("lists",youtubeList);
-		return "index";
-	}
 	
 	@GetMapping("/signin")
 	public String login1(Model model) {
@@ -75,7 +59,7 @@ public class LoginController {
 	}
 	@GetMapping("/myPage")
 	public String mypage() {
-		return "myPage";
+		return "myPage/myPage";
 	}
 	@GetMapping("/authentication_fail")
 	public String authentication_fail() {
