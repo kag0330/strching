@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>북마크</title>
+        <th:block th:replace="~{/fragments/header::header}"></th:block>
+     	<link rel="stylesheet" href="/css/post.css">
+		<link rel="stylesheet" href="/css/aside.css">
+		<link rel="stylesheet" href="/css/paging.css">
+		<link rel="stylesheet" href="/css/common.css">
+        <style>
+		.box {
+			border: 1px solid black;
+		}
+		.bookmark-image{
+			  display: inline-block; 
+			  vertical-align: middle;
+   
+		}
+		 .bookmark-container {
+   			 display: flex;
+  		  align-items: center;
+  		   justify-content: center;
+ 		 }
+ 	
+	</style>
+    </head>
+   <body class="progarm">
+       <div class="box">
+		<th:block th:replace="~{/fragments/navbar::navbar}"></th:block>
+		
+        <h1 class="bookmark-container">북마크 목록 <img src="/img/bookmark.jpg" width="200" height="200"
+                          											 class="bookmark-image"></h1>
+		<div class="vrow column head d-none d-md-fiex">
+			<div class="vrow-inner">
+				<div class="vrow-top">
+					<span class="vcol col-id">번호</span>
+					<span class="vcol col-img">이미지</span>
+					<span class="vcol col-title">제목</span>
+				</div>
+				<div class="vrow-bottom">
+					<span class="vcol col-rate">추천</span>
+					<span class="vcol col-time">작성일</span>
+					<span class="vcol col-view">조회수</span>
+				</div>
+			</div>
+		</div> 
+                   <!-- 여기부터 즐겨찾기 목록 -->
+                   
+                   
+                   
+	
+	
+       <th:block th:replace="~{/fragments/footer::footer}"></th:block>
+       </div>
+    </body>
+</html>

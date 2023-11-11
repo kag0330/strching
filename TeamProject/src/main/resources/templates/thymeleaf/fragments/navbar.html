@@ -10,7 +10,7 @@
 			<li><a href="/signin">LOGIN</a></li>
 		</th:block>
 		<th:block th:if="${not #strings.isEmpty(loginUser)}">
-				<li><a th:text="${loginUser}" th:href="@{/myPage}"></a></span></li>
+				<li><a th:text="${loginUser}" th:href="@{/bookmark}"></a></span></li>
 				<li><a th:text="logout" th:href="@{/logout}"></a></span></li>
 		</th:block>
 

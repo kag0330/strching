@@ -7,12 +7,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>자유게시판</title>
          <th:block th:replace="~{/fragments/header::header}"></th:block>
-        <link rel="stylesheet" href="css/share.css" />
-        <link rel="stylesheet" href="css/board.css" />
-        <link rel="stylesheet" href="css/media.css" />
-        <link rel="stylesheet" href="css/post.css">
-        <link rel="stylesheet" href="css/aside.css">
-        <link rel="stylesheet" href="css/goods.css">
+        <link rel="stylesheet" href="/css/share.css" />
+        <link rel="stylesheet" href="/css/board.css" />
+        <link rel="stylesheet" href="/css/media.css" />
+        <link rel="stylesheet" href="/css/post.css">
+        <link rel="stylesheet" href="/css/aside.css">
     </head>
     <style>
         .main-container{
@@ -21,24 +20,15 @@
        .box{
 		border : 1px solid black;
 		}
+		h1 {
+            font-size: 2.4em;
+        }
     </style>
     <b>
 		 <div class="box">
          	<th:block th:replace="~{/fragments/navbar::navbar}"></th:block>
         <section class="grid">
-            <article>
-                <div class="aside">
-                    <div>
-                        <h1><a href="/messageBoard" id="program">BULLETIN BOARD</a></h1>
-                    </div>
-                    <div >
-                        <ul>
-                            <p><a class="active2" href="/messageBoard" >BULLETIN BOARD</a></p>
-                            <p> <a href="/m_myRoutine">My ROUTINE</a></p>
-                        </ul>
-                    </div>
-                </div>
-            </article>
+            
             <article style="min-height: calc(100vh - 170px);">
                 <div class="main-container">
                     <div class="main-title">

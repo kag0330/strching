@@ -85,6 +85,10 @@ public class LoginController {
 	public String authorizaion() {
 		return "authorization_fail";
 	}
+	@GetMapping("/bookmark")
+	public String bookmark() {
+		return "bookmark";
+	}
 	
 	@PostMapping("signup/ok")
 	public String signupOk(@ModelAttribute("userDto") UserDto userDto, Model model) {

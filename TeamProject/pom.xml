@@ -34,6 +34,12 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.22</version> <!-- 현재 최신 버전인지 확인하세요 -->
+    <scope>provided</scope>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			
