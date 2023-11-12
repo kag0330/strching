@@ -33,8 +33,8 @@ public class SecurityConfig {
 	public SecurityFilterChain filterChain (HttpSecurity http) throws Exception{
 		http.csrf().disable()
 			.authorizeHttpRequests()
-			.requestMatchers("/myPage").authenticated()
-			.requestMatchers("/myPage/**").authenticated()
+			.requestMatchers("/mypage").authenticated()
+			.requestMatchers("/mypage/**").authenticated()
 			.requestMatchers("/admin/**").hasAuthority(UserRole.ADMIN.name())
 			.anyRequest().permitAll()
 		.and()

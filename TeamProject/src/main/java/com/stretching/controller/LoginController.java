@@ -57,10 +57,6 @@ public class LoginController {
 	public String findpass() {
 		return "find_pass";
 	}
-	@GetMapping("/myPage")
-	public String mypage() {
-		return "myPage/myPage";
-	}
 	@GetMapping("/authentication_fail")
 	public String authentication_fail() {
 		return "authentication_fail";

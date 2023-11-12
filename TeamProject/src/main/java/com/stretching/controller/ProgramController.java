@@ -36,12 +36,7 @@ public class ProgramController {
 	
 	@GetMapping("/program")
 	public String programGet(@PageableDefault(page = 1) Pageable pageable, Model model, Authentication auth) {
-		if (auth != null) {
-			User loginUser = userService.getLoginUser(auth.getName());
-			if (loginUser != null) {
-				model.addAttribute("loginUser", loginUser.getId());
-			}
-		}
+		userService.logincheck(auth, model);
 		Page<YoutubeDto> youtubePages = youtubeService.paging(pageable);
 		int blockLimit = 3;
 		int startPage = ((int) Math.ceil(((double) pageable.getPageNumber() / blockLimit)));
@@ -58,12 +53,7 @@ public class ProgramController {
 	@PostMapping("/program")
 	public String programPost(@RequestParam("search") String searchKey, @PageableDefault(page = 1) Pageable pageable,
 			Model model, Authentication auth) {
-		if (auth != null) {
-			User loginUser = userService.getLoginUser(auth.getName());
-			if (loginUser != null) {
-				model.addAttribute("loginUser", loginUser.getId());
-			}
-		}
+		userService.logincheck(auth, model);
 		Page<YoutubeDto> youtubePages = youtubeService.pagingSearch(pageable, searchKey);
 		int blockLimit = 3;
 		int startPage = ((int) Math.ceil(((double) pageable.getPageNumber() / blockLimit)));
@@ -78,11 +68,10 @@ public class ProgramController {
 	}
 
 	@GetMapping("/youtubeview/{seq}")
-	public String youtubeview(@PathVariable("seq") Long seq, Model model) {
-		System.out.println(seq);
+	public String youtubeview(@PathVariable("seq") Long seq, Model model, Authentication auth) {
+		userService.logincheck(auth, model);
 		YoutubeDto youtubeDto = youtubeService.youtubePrint(seq);
 		youtubeService.updateCnt(seq);
-		System.out.println(youtubeDto);
 		model.addAttribute("youtube", youtubeDto);
 		return "youtubeview";
 	}
@@ -103,15 +92,12 @@ public class ProgramController {
 	@PostMapping("/checkBookmark")
 	@ResponseBody
 	public boolean checkBookmark(@RequestParam("seq") Long seq, Authentication auth, Model model) {
-		System.out.println("1");
 		if (auth != null) {
 			User loginUser = userService.getLoginUser(auth.getName());
 			if (loginUser != null) {
-				System.out.println("2");
 				return youtubeService.checkBookmark(loginUser, seq);
 			}
 		}
-		System.out.println("3");
 		return false;
 	}
 }

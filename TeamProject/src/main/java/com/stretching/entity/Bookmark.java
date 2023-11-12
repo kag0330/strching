@@ -46,9 +46,4 @@ public class Bookmark {
 		this.youtube = youtube;
 		this.status = true;
 	}
-	
-	public void unBookmark(User user, Youtube youtube) {
-		this.status = false;
-	}
-	
 }

@@ -50,7 +50,6 @@ public class YoutubeService {
 		YoutubeDto youtubeDto = new YoutubeDto(youtube);
 	    return youtubeDto;
 	}
-
 	public List<YoutubeDto> youtubeListPrintByDate() {
 		List<Youtube> youtubeList = youtubeRepository.findAll(Sort.by(Sort.Direction.DESC, "uploadDate"));
 		List<YoutubeDto> youtubeDtoList = new ArrayList<>();
@@ -60,6 +59,7 @@ public class YoutubeService {
 		}
 		return youtubeDtoList;
 	}
+	
 	public List<YoutubeDto> youtubeListPrintByCnt() {
 		List<Youtube> youtubeList = youtubeRepository.findAll(Sort.by(Sort.Direction.DESC, "cnt"));
 		System.out.println(youtubeList.toString());
@@ -175,5 +175,18 @@ public class YoutubeService {
 			System.out.println("6");
 			return false;
 		}
+	}
+
+	public boolean delete(Long seq) {
+		try {
+			Youtube youtube = youtubeRepository.findBySeq(seq);
+			bookmarkRepository.deleteByYoutube(youtube);
+			youtubeRepository.deleteBySeq(seq);
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		
 	}
 }

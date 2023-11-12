@@ -1,61 +1,54 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">'
-<html lang="ko">
-    <head>
-        <meta charset="utf-8">
-        <title>마이페이지</title>
-         <th:block th:replace="~{/fragments/header::header}"></th:block>
-        <link rel="stylesheet" href="css/post.css">
-        <link rel="stylesheet" href="css/aside.css">
-        <link rel="stylesheet" href="css/goods.css">
-        <style>
-       #color{
-        color: black;
-        font-size: 20px;
-       }
-       .main{
-        display: block
-       }
-       
-        </style>
-    </head>
-    <body>
-     	<th:block th:replace="~{/fragments/navbar::navbar}"></th:block>
-        <section class="grid">
-            <article>
-                <div class="aside">
-                    <div>
-                        <h1><a class="active2" href="/myPage">MYPAGE</a></h1>
-                    </div>
-                    <div >
-                        <ul>
-                            <p><a th:href="@{myPage/bookmark}">BOOKMARK</a></p>
-                            <p><a href="/myPost">MY POST</a></p>
-                            <p><a href="/myPage">SETTING</a></p>
-                        </ul>
-                    </div> 
-                </div>
-            </article>
-            <article>
-                <div class="main"> 
-                    <div> 
-                       <div><a th:href="@{myPage/bookmark}" >즐겨찾기 목록</a></div>
-                       <div><a href="/myPost" >내 게시물</a></div>
-                       <div><a href="/change" >개인 정보 수정</a></div>
-                    </div>
-                </div>
-            </article>
-        </section>
-        <footer>
-            <div class="footer">
-                <ul>
-                    <li>유한대학교 </li>
-                    <li>컴퓨터소프트웨어공학과</li>
-                    <li>컴퓨터소프트웨어전공 </li>
-                    <li>3조</li>
-                    <li>02-2610-0768</li>
-                </ul>
-            </div>
-        </footer>
-    </body>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>메인페이지</title>
+	
+	<th:block th:replace="~{/fragments/header::header}"></th:block>
+	<link rel="stylesheet" href="/css/slide.css">
+	<link rel="stylesheet" href="/css/index.css">
+	<style>
+		.content{
+			flex-wrap: wrap;
+			align-content: center;
+			width: 100%;
+			min-height: 1200px;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+		}
+		button{
+			font-size: 1rem;
+			margin: 5px;
+			width: 200px;
+			height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<th:block th:replace="~{/fragments/navbar::navbar}"></th:block>
+	<div class ="content">
+		<button onclick="adminPage()">관리자페이지</button>
+		<button onclick="location.href='mypage/bookmark'">북마크 보러가기</button>
+	</div>
+	<th:block th:replace="~{/fragments/footer::footer}"></th:block>
+</div>
+<script th:inline="javascript">
+	var userRole = /*[[${userRole}]]*/"";
+	function adminPage(){
+		if(userRole == "ADMIN"){
+			location.href="/admin";
+		}else{
+			alert("권한이 없습니다.\n관리자에게 문의하세요.");
+		}
+	}
+	function bookmarkPage(){
+		
+	}
+</script>
+
+</body>
+
 </html>

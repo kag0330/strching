@@ -25,12 +25,7 @@ public class DefaultController {
 	
 	@GetMapping
 	public String index(Model model, Authentication auth) {
-		if(auth != null) {
-			User loginUser = userService.getLoginUser(auth.getName());
-			if(loginUser != null) {
-				model.addAttribute("loginUser", loginUser.getId());
-			}
-		}
+		userService.logincheck(auth, model);
 		List<YoutubeDto> youtubeListDate = youtubeService.youtubeListPrintByDate();
 		List<YoutubeDto> youtubeListCnt = youtubeService.youtubeListPrintByCnt();
 		model.addAttribute("listsDate",youtubeListDate);

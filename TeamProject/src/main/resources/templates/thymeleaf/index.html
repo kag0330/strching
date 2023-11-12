@@ -51,11 +51,11 @@
 	<th:block th:replace="~{/fragments/navbar::navbar}"></th:block>
 
 	<div class="main">
-		<img th:src="@{/img/stretching.jpg}" width="90%">
+		<img th:src="@{/img/stretching.jpg}" width="100%">
 	</div>
 	<section>
 		<div id="content_box">
-			<div>
+			<div class="view-title">
 				<h3>최신영상</h3>
 				<h3 class="view"><a href="/program">전체보기</a></h3>
 			</div>
@@ -63,7 +63,6 @@
 				<span class="you1">
 					<a th:each="num : ${#numbers.sequence(0,3)}" th:href="@{/youtubeview/{seq}(seq = ${listsDate[num].seq})}">
 						<img th:src="${listsDate[num].imgUrl}" width="350" height="250">
-						<!--<span th:text="${listsDate[num].title}"></span>-->
 					</a>
 				</span>
 	</section>
@@ -71,13 +70,11 @@
 		<div id="content_box">
 			<div>
 				<h3>인기영상</h3>
-			<h3 class="view"><a href="/program">전체보기</a></h3>
 			</div>
 			<div id="youtube">
 				<span class="you1">
 					<a th:each="num : ${#numbers.sequence(0,3)}" th:href="@{/youtubeview/{seq}(seq = ${listsCnt[num].seq})}">
 						<img th:src="${listsCnt[num].imgUrl}" width="350" height="250">
-						<!--<span th:text="${listsDate[num].title}"></span>-->
 					</a>
 				</span>
 	</section>

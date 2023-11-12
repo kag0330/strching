@@ -1,13 +1,18 @@
 package com.stretching.entity;
 
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.persistence.TableGenerator;
 import lombok.Builder;
@@ -48,7 +53,7 @@ public class Youtube {
 	private Date uploadDate;
 	
 	@Column(name = "CNT")
-	private Long cnt;	
+	private Long cnt;
 
 	@Builder
 	public Youtube(Long seq, String title, String url, String iframeurl, 
