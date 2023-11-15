@@ -22,7 +22,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.stretching.dto.UserDto;
 import com.stretching.dto.YoutubeDto;
+import com.stretching.entity.User;
+import com.stretching.repository.UserRepository;
 import com.stretching.repository.YoutubeRepository;
 import com.stretching.service.JsonListService;
 import com.stretching.service.UserService;
@@ -72,6 +75,13 @@ public class AdminController {
 		model.addAttribute("endPage", endPage);
 		model.addAttribute("today", today);
 		return "adminPage/delete";
+	}
+	@GetMapping("/userAAA")
+	public String userAAA(@PageableDefault(page = 1) Pageable pageable, Model model, Authentication auth) {
+		userService.logincheck(auth, model);
+		List<User> userPages = userService.paging();
+		model.addAttribute("userPages", userPages);
+		return "adminPage/userAAA";
 	}
 	@DeleteMapping("/delete/{seq}")
 	public ResponseEntity<String> deleteItem(@PathVariable("seq")Long seq){

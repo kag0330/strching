@@ -11,6 +11,7 @@
 <style>
 	.box {
 		border: 1px solid black;
+		
 	}
 </style>
 
@@ -19,7 +20,7 @@
 	<div class="box">
 		<div class="center">
 			<!-- Video Player -->
-			<section class="player">
+			
 				<div>
 					<span class="you1">
 						<iframe width="1300" height="700" th:src="${youtube.iframeUrl}" title="YouTube video player"
@@ -28,7 +29,7 @@
 							allowfullscreen></iframe>
 					</span>
 				</div>
-			</section>
+			
 
 			<section class="info">
 				<div class="metadata">
@@ -49,8 +50,10 @@
 							<span class="name" th:text="${youtube.uploader}">안민수</span>
 						</div>
 					</div>
-					<button class="subscribe" onclick="bookmark()">즐겨찾기</button>
-					<img id ="bookmarkImg">
+					<div>
+						<button class="subscribe" onclick="bookmark()">즐겨찾기</button>
+						<img id="bookmarkImg">
+					</div>
 				</div>
 				<th:block th:replace="~{/fragments/footer::footer}"></th:block>
 			</section>
@@ -64,46 +67,46 @@
 		/*<![CDATA[*/
 		var seq = /*[[ ${youtube.seq} ]]*/ "";
 		$(document).ready(function () {
-        checkBookmark();
-    });
-    
+			checkBookmark();
+		});
+
 		function bookmark() {
 			$.ajax({
-				url			: "/bookmark",
-				type		: "POST",
-				data		: {seq : seq},
-				success: function(data){
-					if(data != "OK"){
+				url: "/bookmark",
+				type: "POST",
+				data: {seq: seq},
+				success: function (data) {
+					if (data != "OK") {
 						alert(data);
 					}
 				},
-				error: function(){
+				error: function () {
 					alert('error');
 				}
 			});
 			changeImg();
 		}
-		function checkBookmark(){
+		function checkBookmark() {
 			$.ajax({
-				url			: "/checkBookmark",
-				type		: "POST",
-				data		: {seq : seq},
-				success: function(bool){
-					if(bool == true){
+				url: "/checkBookmark",
+				type: "POST",
+				data: {seq: seq},
+				success: function (bool) {
+					if (bool == true) {
 						$("#bookmarkImg").attr("src", "/img/bookmark_added.png");
-					}else if(bool == false){
+					} else if (bool == false) {
 						$("#bookmarkImg").attr("src", "/img/bookmark.png")
 					}
 				}
 			});
 		}
-		function changeImg(){
+		function changeImg() {
 			var defaultImg = document.getElementById("bookmarkImg").src;
 			var defaultSrc = "https://kag0330.duckdns.org/img/bookmark.png"
 			console.log(defaultImg)
-			if(defaultImg == defaultSrc){
+			if (defaultImg == defaultSrc) {
 				$("#bookmarkImg").attr("src", "/img/bookmark_added.png");
-			}else{
+			} else {
 				$("#bookmarkImg").attr("src", "/img/bookmark.png")
 			}
 		}

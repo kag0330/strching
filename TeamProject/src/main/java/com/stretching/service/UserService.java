@@ -1,8 +1,13 @@
 package com.stretching.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -11,9 +16,13 @@ import org.springframework.ui.Model;
 
 import com.stretching.dto.LoginRequest;
 import com.stretching.dto.UserDto;
+import com.stretching.dto.YoutubeDto;
 import com.stretching.entity.User;
+import com.stretching.entity.Youtube;
 import com.stretching.repository.UserRepository;
 import com.stretching.role.UserRole;
+
+import jakarta.transaction.Transactional;
 
 @Service
 public class UserService {
@@ -40,7 +49,6 @@ public class UserService {
 	 * 유저 아이디 체크 아이디가 중복이 아니면 true 리턴 아이디가 중복이면 false 리턴
 	 */
 	public boolean UserIdCheck(String id) {
-		System.out.println("USER_ID_CHECK");
 		if (userRepository.findById(id).isEmpty()) {
 			return true;
 		} else {
@@ -84,6 +92,33 @@ public class UserService {
 				model.addAttribute("loginUser", loginUser.getId());
 				model.addAttribute("userRole", loginUser.getRole());
 			}
+		}
+	}
+
+	public boolean delete(String userid) {
+		try {
+			userRepository.deleteById(userid);
+			return true;
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+			return false;
+	}
+
+	public List<User> paging() {
+		List<User> pages = userRepository.findAll();
+		return pages;
+		
+	}
+	
+	@Transactional
+	public boolean putRole(String userid) {
+		User user = userRepository.findById(userid).get();
+		if(user != null) {
+			user.changeRoleAdmin();
+			return true;
+		}else {
+			return false;
 		}
 	}
 

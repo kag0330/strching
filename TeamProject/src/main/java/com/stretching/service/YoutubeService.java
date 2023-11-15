@@ -84,7 +84,7 @@ public class YoutubeService {
 		Page<Youtube> pages = youtubeRepository.findAll(PageRequest.of(page, pageLimit, Sort.by("seq").descending()));
 
 		Page<YoutubeDto> pageDto = pages.map(postPage -> new YoutubeDto(postPage));
-		System.out.println(pageDto.toString());
+		
 
 		return pageDto;
 	}
@@ -150,7 +150,6 @@ public class YoutubeService {
 	public void updateCnt(Long seq) {
 		Youtube youtube = youtubeRepository.findBySeq(seq);
 		youtube.incrementCnt();
-		System.out.println("Youtube: " + youtube);
 	}
 	
 	@Transactional

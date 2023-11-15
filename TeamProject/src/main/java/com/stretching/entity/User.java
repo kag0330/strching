@@ -45,5 +45,8 @@ public class User {
 		this.phone = phone;
 		this.role = role;
 	}
+	public void changeRoleAdmin() {
+		this.role = UserRole.ADMIN;
+	}
 	
 }

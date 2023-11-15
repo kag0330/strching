@@ -32,9 +32,11 @@
 	<div class ="content">
 		<button onclick="adminPage()">관리자페이지</button>
 		<button onclick="location.href='mypage/bookmark'">북마크 보러가기</button>
+		<button onclick="deleteUser()">회원 탈퇴</button>
 	</div>
 	<th:block th:replace="~{/fragments/footer::footer}"></th:block>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script th:inline="javascript">
 	var userRole = /*[[${userRole}]]*/"";
 	function adminPage(){
@@ -44,9 +46,23 @@
 			alert("권한이 없습니다.\n관리자에게 문의하세요.");
 		}
 	}
-	function bookmarkPage(){
-		
+	function deleteUser(){
+		if(window.confirm("회원탈퇴 하려면 확인버튼을 클릭하십시오.")){
+			var userid = /*[[${loginUser}]]*/"";
+			$.ajax({
+				url			: "/delete/"+userid,
+				type		: "DELETE",
+				success: function(response){
+					alert(response);
+					window.location.replace("/");
+				},
+				error: function(error){
+					alert(error)
+				}
+			});
+		}
 	}
+	
 </script>
 
 </body>
