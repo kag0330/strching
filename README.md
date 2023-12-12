@@ -24,10 +24,11 @@
 - **ORM** : Spring Data JPA
 
 ## 📌 주요 기능
-#### 메인페이지 - <img href="https://github.com/kag0330/strching/blob/main/View/index.png">
-- 
-- 
-- 
+#### 메인페이지
+![image](https://github.com/kag0330/strching/assets/65347323/f2f32e26-15e6-440c-bc67-90aae54aec50)
+- 최신 영상 표시
+- 인기 영상 표시
+- 인기 상품 표시
 #### 회원가입 - 
 - 주소 API 연동
 - ID 중복 체크
