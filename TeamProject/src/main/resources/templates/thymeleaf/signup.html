@@ -1,0 +1,74 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<title>회원가입</title>
+	<link rel="stylesheet" href="css/signup.css">
+	<th:block th:replace="~{/fragments/header::header}"></th:block>
+
+</head>
+
+<body>
+	<th:block th:replace="~{/fragments/navbar::navbar}"></th:block>
+	<div class="center">
+		<h1>회원가입</h1>
+
+
+		<form th:action="@{/signup/ok}" method="post" th:object="${userDto}">
+			<div>
+				<input class="input input-id" type="text" placeholder="아이디" name="id" th:field="*{id}"
+					oninput="checkId()" required autofocus>
+				<input class="button" type="button" id="idcheck" name="idcheck" value="중복확인">
+			</div>
+			<input class="input input-pw1" type="password" placeholder="비밀번호" id="pw" name="pw" th:field="*{pw}"
+				required>
+			<input class="input input-pw2" type="password" placeholder="비밀번호 재확인" id="pw2" name="pw2" required>
+			<input class="input input-name" type="text" placeholder="이름" name="name" th:field="*{name}" required>
+
+			<input class="input input-tel" type="text" placeholder="전화번호" name="phone" th:field="*{phone}" required>
+
+			<button class="signup" type="submit" onclick="return test()">회원가입
+				</span>
+
+
+		</form>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			function test() {
+				var p1 = document.getElementById('pw').value;
+				var p2 = document.getElementById('pw2').value;
+
+				if (p1 != p2) {
+					alert("비밀번호가 일치 하지 않습니다");
+					return false;
+				} else {
+					return true;
+				}
+
+			}
+			function checkId() {
+				var id = document.getElementById('id').value;
+				$.ajax({
+					url: './idCheck',
+					type: 'post',
+					data: {id: id},
+					success: function (bool) {
+						if (bool == true) {
+							$('#idcheck').val('사용가능한ID');
+							$('#idcheck').css('background', '#3897F0');
+						} else if (bool == false) {
+							$('#idcheck').val('사용불가능한ID');
+							$('#idcheck').css('background', '#ff0000');
+						}
+					},
+					error: function () {
+						alert('에러발생');
+					}
+				});
+			};
+		</script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,68 @@
+.recently-youtube-swipe{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 150px;
+}
+
+.recently-youtube-swipe .swiper-slide {
+    display: flex;
+    padding: 0 60px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+.best-youtube-swipe{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 150px;
+}
+
+.best-youtube-swipe .swiper-slide {
+    display: flex;
+    padding: 0 60px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+.recently-item-swipe{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+}
+
+.recently-item-swipe .item-swiper-slide {
+    display: flex;
+    padding: 0 60px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.recently-item-swipe .swiper-slide {
+    display: flex;
+    padding: 0 60px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.best-item-swipe{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+}
+
+.best-item-swipe .item-swiper-slide {
+    display: flex;
+    padding: 0 60px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.best-item-swipe .swiper-slide {
+    display: flex;
+    padding: 0 60px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+

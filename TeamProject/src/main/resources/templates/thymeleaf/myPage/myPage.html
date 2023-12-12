@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>메인페이지</title>
+	
+	<th:block th:replace="~{/fragments/header::header}"></th:block>
+	<link rel="stylesheet" href="/css/slide.css">
+	<link rel="stylesheet" href="/css/index.css">
+	<style>
+		.content{
+			flex-wrap: wrap;
+			align-content: center;
+			width: 100%;
+			min-height: 1200px;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+		}
+		button{
+			font-size: 1rem;
+			margin: 5px;
+			width: 200px;
+			height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<th:block th:replace="~{/fragments/navbar::navbar}"></th:block>
+	<div class ="content">
+		<button onclick="adminPage()">관리자페이지</button>
+		<button onclick="location.href='mypage/bookmark'">북마크 보러가기</button>
+		<button onclick="deleteUser()">회원 탈퇴</button>
+	</div>
+	<th:block th:replace="~{/fragments/footer::footer}"></th:block>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script th:inline="javascript">
+	var userRole = /*[[${userRole}]]*/"";
+	function adminPage(){
+		if(userRole == "ADMIN"){
+			location.href="/admin";
+		}else{
+			alert("권한이 없습니다.\n관리자에게 문의하세요.");
+		}
+	}
+	function deleteUser(){
+		if(window.confirm("회원탈퇴 하려면 확인버튼을 클릭하십시오.")){
+			var userid = /*[[${loginUser}]]*/"";
+			$.ajax({
+				url			: "/delete/"+userid,
+				type		: "DELETE",
+				success: function(response){
+					alert(response);
+					window.location.replace("/");
+				},
+				error: function(error){
+					alert(error)
+				}
+			});
+		}
+	}
+	
+</script>
+
+</body>
+
+</html>

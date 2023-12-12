@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>운동기구-폼롤러</title>
+        <th:block th:replace="~{/fragments/header::header}"></th:block>
+        <link rel="stylesheet" href="css/post.css">
+        <link rel="stylesheet" href="css/aside.css">
+        <link rel="stylesheet" href="css/goods.css">
+        <link rel="stylesheet" href="css/search.css">
+        <link rel="stylesheet" href="css/videoList.css">
+         <style>
+		.box {
+		border: 1px solid black;
+		}
+</style>
+    </head>
+    <body>
+		<div class="box">
+        	<th:block th:replace="~{/fragments/navbar::navbar}"></th:block>
+       <section class="grid">
+        <article>
+            <div class="aside">
+                <div>
+                    <h1><a href="/sportingGoods">SPORTING GOODS</a></h1>
+                </div>
+                <div >
+                    <ul>
+                        <p><a class="active2" href="/s_FoamRoller" >FOAMROLLER</a></p>
+                        <p> <a href="/s_MassageBall">MASSAGEBALL</a></p>
+                        <p><a href="/s_Band">BAND</a></p>
+                    </ul>
+                </div> 
+            </div>
+        </article>
+        <article> 
+            <div class="listmain"> 
+                <div class="videoList"> 
+                    <span>
+                        <span>
+                            <h3>폼롤러</h3>
+                        </span> 
+                    </span>
+                    <span class="search" style="margin-right: 120px; margin-top: 0px;">
+                        <div class="icon"></div>
+                        <div class="input">
+                            <input type="text" placeholder="Search" id="mySearch">
+                        </div>
+                        <span class="clear" onclick="document.getElementById('mySearch').value = ''"></span>
+                    </span>
+                </div>
+            </div> 
+            <div class="goodslist">
+                <div class="content_box">  
+                    <div class="item">
+                        <div class="item1"><a href="https://brand.naver.com/andar/products/6807366752">
+                        <div><img src="/img/foam10.jpg"  alt="폼롤러 사진"></div>
+                            <div>안다르 폼롤러 II(M)</div>
+                            <div>19,900원</div>
+                            <div>평점<span>4.5</span>·리뷰<span>54</span></div>
+                        </a></div>
+                        <div  class="item1"><a href="https://brand.naver.com/andar/products/6807383852">
+                            <div><img src="/img/foam11.jpg" alt="폼롤러 사진"></div>
+                            <div>안다르 폼롤러 II(L)</div>
+                            <div>32,000원</div>
+                            <div>평점<span>4.7</span>·리뷰<span>29</span></div>
+                        </a></div>
+                        <div  class="item1"><a href="https://brand.naver.com/melkin/products/8474216403?n_keyword=&n_rank=2&n_query=%ED%8F%BC%EB%A1%A4%EB%9F%AC&n_campaign_type=2&n_media=27758&n_campaign=cmp-a001-02-000000002346664&n_ad_group=grp-a001-02-000000034679397&n_ad=nad-a001-02-000000244613426&n_match=3&n_network=search&n_mall_id=melkin01&n_mall_pid=8474216403&n_ad_group_type=2&n_keyword_id=&n_ad_extension=&NaPm=ct%3Dlnwz1v6g%7Cci%3D0A40003tX31zeopH91mz%7Ctr%3Dpla%7Chk%3Da32ab5a970e4157e702b645b7cfae6da230fdc08">
+                            <div><img src="/img/foam12.jpg" alt="폼롤러 사진"></div>
+                            <div>멜킨 EVA 미니폼롤러</div>
+                            <div>8,900원</div>
+                            <div>평점<span>4.8</span>·리뷰<span>1,024</span></div>
+                        </a></div>
+                        <div  class="item1"><a href="https://brand.naver.com/melkin/products/6692143762?NaPm=ct%3Dlnwz1p08%7Cci%3Dc1dcd0522e1ba2c5d91c2bb3f782b419ea081074%7Ctr%3Dsls%7Csn%3D447572%7Chk%3Dad056ef469febb3db88a049f28d3c52f2bf13f18">
+                            <div><img src="/img/foam13.jpg" alt="폼롤러 사진"></div>
+                            <div>멜킨 미니 폼롤러 </div>
+                            <div>11,900원</div>
+                            <div>평점<span>4.8</span>·리뷰<span>2,104</span></div>
+                        </a></div>
+                       <div  class="item1"><a href="https://brand.naver.com/melkin/products/581155411?NaPm=ct%3Dlnwz370o%7Cci%3D838545e40ca8d972ee63d5c8aaa497bc58ccee0c%7Ctr%3Dsls%7Csn%3D447572%7Chk%3D357675039e2a5ca5bea9bc4870eb7b5dc82d19f1">
+                            <div><img src="/img/foam14.jpg" alt="폼롤러 사진"></div>
+                            <div>멜킨 EVA 폼롤러</div>
+                            <div>11,900원</div>
+                            <div>평점<span>4.7</span>·리뷰<span>137,841</span></div>
+                       </a></div>
+                       <div  class="item1"><a href="https://brand.naver.com/melkin/products/7513817869?NaPm=ct%3Dlnwz4tns%7Cci%3Df0de7c83d7e2c5cb4f12e51a83644c5c98079641%7Ctr%3Dsls%7Csn%3D447572%7Chk%3D25bf7cefff1274bc102b298f4b3e07fbaec2f999">
+                            <div ><img src="/img/foam15.jpg" alt="폼롤러 사진"></div>
+                            <div>멜킨 EPP 폼롤러</div>
+                            <div>25,900원</div>
+                            <div>평점<span>4.9</span>·리뷰<span>455</span></div>
+                       </a></div>
+                       <div  class="item1"><a href="https://brand.naver.com/naumon/products/7906903018?n_media=27758&n_query=%ED%8F%BC%EB%A1%A4%EB%9F%AC&n_rank=2&n_ad_group=grp-a001-02-000000029316885&n_ad=nad-a001-02-000000232930941&n_campaign_type=2&n_mall_id=naum05&n_mall_pid=7906903018&n_ad_group_type=2&n_match=3&NaPm=ct%3Dlnwz7p20%7Cci%3D0yW0003JXh1ztoiXBv1D%7Ctr%3Dpla%7Chk%3D0b65a515d21150c5e20e33291eecbf1fc568a3ba">
+                            <div><img src="/img/foam16.jpg" alt="폼롤러 사진"></div>
+                            <div>트라택 필라테스 폼롤러</div>
+                            <div>37,620원</div>
+                            <div>평점<span>4.9</span>·리뷰<span>552</span></div>
+                       </a></div>
+                       <div class="item1"><a href="https://smartstore.naver.com/wssports/products/2153456986?n_media=27758&n_query=%ED%8F%BC%EB%A1%A4%EB%9F%AC&n_rank=1&n_ad_group=grp-a001-02-000000025386834&n_ad=nad-a001-02-000000167119615&n_campaign_type=2&n_mall_id=wssport77&n_mall_pid=2153456986&n_ad_group_type=2&n_match=3&NaPm=ct%3Dlnwz9gbs%7Cci%3D0Ae00011Xx1zSY27h1jn%7Ctr%3Dpla%7Chk%3D35af06b1113acaced36b3307eea9e64240889e03">
+							<div><img src="/img/foam17.jpg" alt="폼롤러 사진"></div>
+                            <div>아리프 폼롤러</div>
+                            <div>20,500원</div>
+                            <div>평점<span>4.8</span>·리뷰<span>19,840</span></div>
+						</a></div>
+						<div class="item1"><a href="https://smartstore.naver.com/wssports/products/7382439990?NaPm=ct%3Dlnwzaf1s%7Cci%3Db052a433a7bdf04b72e5683cda6d6b4fb3918c67%7Ctr%3Dslsbrc%7Csn%3D432541%7Chk%3D48eb89ff1926387c96a08105fba82ba7497b29a7">
+							<div><img src="/img/foam18.jpg" alt="폼롤러 사진"></div>
+                            <div>아리프지압 마사지 폼롤러</div>
+                            <div>19,400원</div>
+                            <div>평점<span>4.8</span>·리뷰<span>87</span></div>
+						</a></div>
+                    </div>                                              
+                </div>
+            </div> 
+            <div class="postPage">
+                <a href="/s_FoamRoller">1</a>
+                <a href="/s_FoamRoller2">2</a>
+                <a href="/s_FoamRoller3">3</a>
+            </div>
+            </div>            
+        </article>
+       </section>
+        <th:block th:replace="~{/fragments/footer::footer}"></th:block>
+        <script src="js/search.js"></script>
+    </body>
+</html>

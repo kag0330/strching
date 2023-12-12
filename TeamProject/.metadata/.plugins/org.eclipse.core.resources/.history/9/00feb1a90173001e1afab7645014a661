@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>운동기구-폼롤러</title>
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/post.css">
+        <link rel="stylesheet" href="css/aside.css">
+        <link rel="stylesheet" href="css/goods.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/search.css">
+        <link rel="stylesheet" href="css/videoList.css">
+    </head>
+    <body>
+        	<th:block th:replace="~{/fragments/navbar::navbar}"></th:block>
+        <section class="grid">
+            <article class="asidemenu">
+                <div class="aside">
+                    <div>
+                        <h1><a class="active2" href="/sportingGoods">SPORTING GOODS</a></h1>
+                    </div>
+                    <div >
+                        <ul>
+                            <p><a href="/s_FoamRoller">FOAMROLLER</a></p>
+                            <p> <a href="/s_MassageBall" >MASSAGEBALL</a></p>
+                            <p><a href="/s_Band" >BAND</a></p>
+                        </ul>
+                    </div> 
+                </div>
+            </article>
+            <article class="mainscreen">
+                <div class="listmain"> 
+                    <div class="videoList"> 
+                        <span>
+                            <span class="box">
+                                <h3>전체상품</h3>
+                                <span>판매자추천순 | 인기도순 | 평점높은순 | 최신등록순</span>    
+                            </span> 
+                        </span>
+                        <span class="search" style="margin-right: 120px; margin-top: 0px;">
+                            <div class="icon"></div>
+                            <div class="input">
+                                <input type="text" placeholder="Search" id="mySearch">
+                            </div>
+                            <span class="clear" onclick="document.getElementById('mySearch').value = ''"></span>
+                        </span>
+                    </div>
+                </div>       
+                <div class="goodslist">
+                    <div class="content_box">   
+                            <div class="item">
+                               <div class="item1"><a href="https://smartstore.naver.com/cosymourte/products/8745966275?NaPm=ct%3Dlnwyakxc%7Cci%3D90308417f934d082376e85190c52093a08dab0e0%7Ctr%3Dslsc%7Csn%3D8241194%7Chk%3D4e274b61365bdf94dc250ede7ad76c1f250a9b47">
+                                <div><img src="img/ball4.jpg"  alt="마사지 볼 사진"></div>
+                                <div>루아즈 라크로스 볼</div>
+                                <div>1,500원</div>
+                                <div>평점<span>4.7</span>·리뷰<span>15</span></div>
+                           </a></div>
+                           <div class="item1"><a href="https://smartstore.naver.com/dwhealthvill/products/332762739?NaPm=ct%3Dlnwydlq0%7Cci%3Dbb3df7c019490277ee33ce3a96fe7aaaa5cd0d2a%7Ctr%3Dsls%7Csn%3D256893%7Chk%3Df995e340f1ea6cb4b539d7ca217781e2537d5413">
+                                <div><img src="img/ball5.jpg"  alt="마사지 볼 사진"></div>
+                                <div>트라택 릴리즈볼 </div>
+                                <div>4,950원</div>
+                                <div>평점<span>4.7</span>·리뷰<span>3,849</span></div>
+                           </a></div>
+                           <div class="item1"><a href="https://brand.naver.com/naumon/products/2930067991?n_media=27758&n_query=%EB%A7%88%EC%82%AC%EC%A7%80%EB%B3%BC&n_rank=2&n_ad_group=grp-a001-02-000000023993449&n_ad=nad-a001-02-000000158062042&n_campaign_type=2&n_mall_id=naum05&n_mall_pid=2930067991&n_ad_group_type=2&n_match=3&NaPm=ct%3Dlnwyfpc8%7Cci%3D0yi0003jW31znKEIx11C%7Ctr%3Dpla%7Chk%3D60ec5ffa9dfba6afc13485f5d7a82cb35b80d445">
+                                <div><img src="img/ball6.jpg"  alt="마사지 볼 사진"></div>
+                                <div>트라택 액티브볼</div>
+                                <div>79,200원</div>
+                                <div>평점<span>4.8</span>·리뷰<span>250</span></div>
+                           </a></div>
+                            <div  class="item1"><a href="https://brand.naver.com/melkin/products/7513817869?NaPm=ct%3Dlnwz4tns%7Cci%3Df0de7c83d7e2c5cb4f12e51a83644c5c98079641%7Ctr%3Dsls%7Csn%3D447572%7Chk%3D25bf7cefff1274bc102b298f4b3e07fbaec2f999">
+                            <div ><img src="img/foam15.jpg" alt="폼롤러 사진"></div>
+                            <div>멜킨 EPP 폼롤러</div>
+                            <div>25,900원</div>
+                            <div>평점<span>4.9</span>·리뷰<span>455</span></div>
+	                       </a></div>
+	                       <div  class="item1"><a href="https://brand.naver.com/naumon/products/7906903018?n_media=27758&n_query=%ED%8F%BC%EB%A1%A4%EB%9F%AC&n_rank=2&n_ad_group=grp-a001-02-000000029316885&n_ad=nad-a001-02-000000232930941&n_campaign_type=2&n_mall_id=naum05&n_mall_pid=7906903018&n_ad_group_type=2&n_match=3&NaPm=ct%3Dlnwz7p20%7Cci%3D0yW0003JXh1ztoiXBv1D%7Ctr%3Dpla%7Chk%3D0b65a515d21150c5e20e33291eecbf1fc568a3ba">
+	                            <div><img src="img/foam16.jpg" alt="폼롤러 사진"></div>
+	                            <div>트라택 필라테스 폼롤러</div>
+	                            <div>37,620원</div>
+	                            <div>평점<span>4.9</span>·리뷰<span>552</span></div>
+	                       </a></div>
+	                       <div class="item1"><a href="https://smartstore.naver.com/wssports/products/2153456986?n_media=27758&n_query=%ED%8F%BC%EB%A1%A4%EB%9F%AC&n_rank=1&n_ad_group=grp-a001-02-000000025386834&n_ad=nad-a001-02-000000167119615&n_campaign_type=2&n_mall_id=wssport77&n_mall_pid=2153456986&n_ad_group_type=2&n_match=3&NaPm=ct%3Dlnwz9gbs%7Cci%3D0Ae00011Xx1zSY27h1jn%7Ctr%3Dpla%7Chk%3D35af06b1113acaced36b3307eea9e64240889e03">
+								<div><img src="img/foam17.jpg" alt="폼롤러 사진"></div>
+	                            <div>아리프 폼롤러</div>
+	                            <div>20,500원</div>
+	                            <div>평점<span>4.8</span>·리뷰<span>19,840</span></div>
+							</a></div>
+							<div class="item1"><a href="https://smartstore.naver.com/wssports/products/7382439990?NaPm=ct%3Dlnwzaf1s%7Cci%3Db052a433a7bdf04b72e5683cda6d6b4fb3918c67%7Ctr%3Dslsbrc%7Csn%3D432541%7Chk%3D48eb89ff1926387c96a08105fba82ba7497b29a7">
+								<div><img src="img/foam18.jpg" alt="폼롤러 사진"></div>
+	                            <div>아리프지압 마사지 폼롤러</div>
+	                            <div>19,400원</div>
+	                            <div>평점<span>4.8</span>·리뷰<span>87</span></div>
+							</a></div>
+							<div><img src="img/foam19.jpg"  alt="폼롤러 사진"></div>
+                            <div>밸런시스EPP 폼롤러</div>
+                            <div>26,900원</div>
+                            <div>평점<span>4.8</span>·리뷰<span>404</span></div>
+                        </a></div>
+                        <div  class="item1"><a href="https://brand.naver.com/iwha/products/8129329791?NaPm=ct%3Dlnx17zog%7Cci%3D3e2c421a4dfe0f71e56fe0ce3dd39fc77ce16b71%7Ctr%3Dsls%7Csn%3D156921%7Chk%3Da41605139221bb69ada6d567887f4e6978a20a50">
+                            <div><img src="img/foam20.jpg" alt="폼롤러 사진"></div>
+                            <div>스포틀러 EPP 폼롤러</div>
+                            <div>16,700원</div>
+                            <div>평점<span>4.9</span>·리뷰<span>920</span></div>
+                        </a></div>
+                            </div>                                              
+                        </div>
+                        <div class="postPage">
+                            <a href="sportingGoods.html">1</a>
+                            <a href="sportingGoods2.html">2</a>
+                            <a href="sportingGoods3.html">3</a>
+                            <a href="sportingGoods4.html">4</a>
+                            <a href="sportingGoods5.html">5</a>
+                        </div>
+                    </div> 
+            </article>
+        </section>
+        <footer>
+            <div class="footer">
+                <ul>
+                    <li>유한대학교 </li>
+                    <li>컴퓨터소프트웨어공학과</li>
+                    <li>컴퓨터소프트웨어전공 </li>
+                    <li>3조</li>
+                    <li>02-2610-0768</li>
+                </ul>
+            </div>
+        </footer>
+        <script src="js/search.js"></script>
+    </body>
+</html>

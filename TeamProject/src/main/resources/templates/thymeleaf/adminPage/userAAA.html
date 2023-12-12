@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<title>프로그램</title>
+	<th:block th:replace="~{/fragments/header::header}"></th:block>
+	<link rel="stylesheet" href="/css/post.css">
+
+	<link rel="stylesheet" href="/css/paging.css">
+	<link rel="stylesheet" href="/css/common.css">
+	<style>
+		.div-search>span {
+			font-size: 2rem;
+		}
+
+		.deleteBtn {
+			border: none;
+		}
+
+		.vrow-inner {
+			flex: 1;
+		}
+
+		.vcol.col-btn {
+			width: 100px;
+
+			border: none;
+		}
+
+		.vcol.col-img {
+			width: 800px;
+		}
+
+		.vcol.col-img-img {
+			width: 50rem;
+		}
+	</style>
+</head>
+
+<body class="progarm">
+	<th:block th:replace="~{/fragments/navbar::navbar}"></th:block>
+	<div class="justify-content-center div-search">
+	</div>
+	<div>
+		<div class="vrow column head d-none d-md-fiex">
+			<div class="vrow-inner">
+				<div class="vrow-top">
+					<span class="vcol col-id">ID</span>
+					<span class="vcol col-img">PW</span>
+					<span class="vcol col-title">NAME</span>
+				</div>
+				<div class="vrow-bottom">
+					<span class="vcol col-time">Phone</span>
+					<span class="vcol col-view">Role</span>
+					<span class="vcol col-view">권한 변경</span>
+					<span class="vcol col-view">유저 삭제</span>
+				</div>
+			</div>
+		</div>
+		<div th:each="user : ${userPages}" class="vrow column">
+			<div class="vrow-inner">
+				<div class="vrow-top">
+					<span th:text="${user.id}" class="vcol col-id">ID</span>
+					<span class="vcol col-img">
+						<span th:text="${user.pw}" class="vcol col-img-img">PW</span>
+					</span>
+
+					<span class="vcol col-title" th:text="${user.name}">NAME</span>
+				</div>
+				<div class="vrow-bottom">
+
+					<span class="vcol col-time" th:text="${user.phone}"></span>
+
+
+					<span class="vcol col-view" th:text="${user.role}">ROLE</span>
+					<th:block th:if="${user.id} == ${loginUser}">
+						<button class="vcol col-btn" th:onclick="changeRole([[${user.id}]], [[${user.role}]])"
+							disabled=>변경</button>
+						<button class="vcol col-btn" th:onclick="deleteUser([[${user.id}]])" disabled>삭제</button>
+					</th:block>
+					<th:block th:if="${user.id} != ${loginUser}">
+						<button class="vcol col-btn"
+							th:onclick="changeRole([[${user.id}]], [[${user.role}]])">변경</button>
+						<button class="vcol col-btn" th:onclick="deleteUser([[${user.id}]])">삭제</button>
+					</th:block>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<th:block th:replace="~{/fragments/footer::footer}"></th:block>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		function changeRole(id, role) {
+			console.log(role);
+			if (role == "USER") {
+				if (window.confirm("ADMIN으로 변경하려면 확인을 선택하세요.")) {
+					$.ajax({
+						url: "/put/" + id,
+						type: "PUT",
+						success: function (response) {
+							alert(response);
+							location.reload(true);
+						},
+						error: function (error) {
+							alert(error);
+						}
+					});
+				}
+			} else {
+				alert("ADMIN의 권한은 변경하실수 없습니다.");
+			}
+		}
+
+		function deleteUser(id) {
+			if (window.confirm("회원을 삭제하려면 확인을 선택하세요.")) {
+				$.ajax({
+					url: "/delete/" + id,
+					type: "DELETE",
+					success: function (response) {
+						alert(response);
+						location.reload(true);
+					},
+					error: function (error) {
+						alert(error);
+					}
+				})
+			}
+
+		}
+	</script>
+</body>
+
+</html>

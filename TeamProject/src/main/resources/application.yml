@@ -1,0 +1,42 @@
+#서버 설정
+server:
+  port: 8085
+  servlet:
+    session:
+      timeout: 1800
+
+# thymeleaf 설정
+spring:
+  thymeleaf:
+    enabled: true
+    prefix: classpath:/templates/thymeleaf/
+    suffix: .html
+    cache: false
+    
+  jpa:
+    database: mysql
+    open-in-view: false
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        "[format_sql]": true
+      
+  
+    
+    
+#DB 설정
+  datasource:
+    url: jdbc:mysql://kag0330.duckdns.org/strchingDB?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+    username: strchingadmin
+    password: tmxmfpcld1!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    
+  web:
+    resources:
+      static-locations:
+        -classpath:/static/
+        -file:./json/
+        
+

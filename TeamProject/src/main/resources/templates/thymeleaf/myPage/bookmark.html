@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<title>프로그램</title>
+	<th:block th:replace="~{/fragments/header::header}"></th:block>
+	<link rel="stylesheet" href="css/post.css">
+	<link rel="stylesheet" href="css/aside.css">
+	<link rel="stylesheet" href="/css/paging.css">
+	<link rel="stylesheet" href="/css/common.css">
+	<style>
+		.box {
+			border: 1px solid black;
+		}
+
+		.bookmark-image {
+			display: inline-block;
+			vertical-align: middle;
+
+		}
+
+		.bookmark-container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	</style>
+</head>
+
+<body class="progarm">
+	<th:block th:replace="~{/fragments/navbar::navbar}"></th:block>
+	<div>
+		<div style="display: flex; justify-content: center;">
+			<img style="width: 2.5rem;" src="/img/star.svg" class="bookmark-image"><span style="font-size: 2.5rem;"
+				class="bookmark-container">북마크 목록</span>
+		</div>
+		<div>
+			<div class="vrow column head d-none d-md-fiex">
+				<div class="vrow-inner">
+					<div class="vrow-top">
+						<span class="vcol col-id">번호</span>
+						<span class="vcol col-img">이미지</span>
+						<span class="vcol col-title">제목</span>
+					</div>
+					<div class="vrow-bottom">
+						<span class="vcol col-rate">추천</span>
+						<span class="vcol col-time">작성일</span>
+						<span class="vcol col-view">조회수</span>
+					</div>
+				</div>
+			</div>
+			<a th:each="youtube : ${youtubePages}" th:href="@{/youtubeview/{seq}(seq = ${youtube.seq})}"
+				class="vrow column">
+				<div class="vrow-inner">
+					<div class="vrow-top">
+						<span th:text="${youtube.seq}" class="vcol col-id">seq</span>
+						<span class="vcol col-img">
+							<img th:src="${youtube.imgUrl}" class="vcol col-img-img">
+						</span>
+
+						<span class="vcol col-title" th:text="${youtube.title}">title</span>
+					</div>
+					<div class="vrow-bottom" th:with="youtubeDay = ${#dates.format(youtube.uploadDate, 'yyyy.MM.dd')}">
+						<span class="vcol col-rate">추천표시</span>
+						<th:block th:if="${#strings.equals(youtubeDay, today)}">
+							<span class="vcol col-time" th:text="${#dates.format(youtube.uploadDate, 'HH:mm')}"></span>
+						</th:block>
+						<th:block th:unless="${#strings.equals(youtubeDay, today)}">
+							<span class="vcol col-time" th:text="${youtubeDay}"></span>
+						</th:block>
+
+						<span class="vcol col-view" th:text="${youtube.cnt}">cnt</span>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<th:block th:replace="~{/fragments/paging::paging}"></th:block>
+	<th:block th:replace="~{/fragments/footer::footer}"></th:block>
+</body>
+
+</html>

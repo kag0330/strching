@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>메인페이지</title>
+
+	<th:block th:replace="~{/fragments/header::header}"></th:block>
+	<style>
+		.content {
+			flex-wrap: wrap;
+			align-content: center;
+			width: 100%;
+			min-height: 1200px;
+			display: flex;
+			flex-direction: column;
+		}
+
+		button {
+			vertical-align: middle;
+			font-size: 1.5rem;
+			margin: 5px;
+			width: 200px;
+			height: 50px;
+		}
+
+		label {
+			font-size: 2rem;
+
+
+		}
+
+		input {
+			font-size: 1.5rem;
+			width: 300px;
+			height: 50px;
+		}
+
+		table {
+
+			width: 100%;
+		}
+
+		th {
+			text-align: left;
+			width: 50%;
+		}
+
+		tbody tr td {
+			border: 1px solid;
+			height: 3rem;
+		}
+	</style>
+</head>
+
+<body>
+	<th:block th:replace="~{/fragments/navbar::navbar}"></th:block>
+	<div class="content">
+		<div>
+			<label for="search">검색어 : </lable><input id="search" type="text">
+				<label for="max">검색 갯수 : </lable><input id="max" type="number" min="1" max="100"
+						placeholder="기본값 : 10개 검색" oninput="maxInput(this)">
+					<button id="searchBtn" onclick="search()">검색</button>
+					<button id="searchBtn" onclick="location.href='/admin'">관리자페이지로</button>
+		</div>
+		<div id="results">
+			<table>
+				<thead>
+					<th>Title</th>
+					<th>Url</th>
+				</thead>
+				<tbody>
+
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+	<th:block th:replace="~{/fragments/footer::footer}"></th:block>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		function maxInput(obj) {
+			if (obj.value > 100) {
+				obj.value = 100;
+			} else if (obj.value < 0) {
+				obj.value = 0;
+			}
+		}
+		function search() {
+			const search_query = $("#search").val();
+			const max_items = $("#max").val();
+			const tTitle = $("#td-title").val();
+			const tUrl = $("#td-url").val();
+			$("#searchBtn").attr("disabled", true);
+			$("#searchBtn").text("진행중...");
+
+			$.ajax({
+				url: 'https://flask.kag0330.duckdns.org/cu',
+				type: 'POST',
+				contentType: 'application/json',
+				data: JSON.stringify({'search_query': search_query, 'max_items': max_items}),
+				success: function (response) {
+					const tbody = $("#results table tbody");
+					tbody.empty();
+					response.data.forEach(video => {
+						var row = $("<tr>");
+						row.append("<td>" + video.title + "</td>");
+						row.append("<td>" + video.url + "</td>");
+						tbody.append(row);
+					});
+				}, error: function () {
+					$("#results").append("오류 발생");
+
+				}, complete: function () {
+					$("#searchBtn").attr("disabled", false);
+					$("#searchBtn").text("검색");
+				}
+			});
+		}
+	</script>
+</body>
+
+</html>

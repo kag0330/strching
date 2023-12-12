@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>로그인</title>
+        <th:block th:replace="~{/fragments/header::header}"></th:block>
+        <link rel="stylesheet" href="css/signin.css">
+        
+    </head>
+    <body>
+      <th:block th:replace="~{/fragments/navbar::navbar}"></th:block>
+        <div class="center">
+            
+            <h1>로그인</h1>
+            <form  action="/signin" method="post" th:object="${loginRequest}">
+                <div>
+                    <input class="input input-id" type="text" placeholder="아이디"name= "id" th:field="*{loginId}"required autofocus>
+                </div>
+                <div>
+                    <input class="input input-password"  type="password" name="pw" th:field="*{password}"placeholder="비밀번호" required>
+                </div>
+                <div>
+                <input class="login-button" type="submit" value="로그인" id="submit">
+                <div class="divider">
+                    
+                </div>
+
+                <a id="kakao-login-btn"></a>
+                <div class="find">
+                    <a href="/find_id">아이디 찾기 |</a>
+                    <a href="/find_pass">비밀번호 찾기 |</a>
+                    <a href="/signup">회원가입</a>
+                </div>
+            </form>
+        </div>
+        <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    </body>
+</html>

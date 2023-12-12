@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>아이디 찾기</title> 
+        <link rel="stylesheet" href="css/finder.css">
+    </head>
+    <body>
+		 <th:block layout:fragment="header" th:include="/fragments/header"></th:block>
+        <span class="finder">
+            <h1>아이디 찾기</h1>
+            <span>
+                <input class="input name" type="text" name="name" placeholder="이름" required><br>
+                <input class="input input-tel" type="text" placeholder="전화번호" name="phone" required>
+                <input  class="certification" type="button" value="인증번호 받기"><br>
+                <input class="input input-certificartion" type="text" placeholder="인증번호 입력" required>
+                <input class="finder-button" type="submit" value="확인">  
+            </span>
+        </span>
+    </body>
+</html>
