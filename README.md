@@ -24,7 +24,7 @@
 - **ORM** : Spring Data JPA
 
 ## 📌 주요 기능
-#### 메인페이지 - <img href="">
+#### 메인페이지 - <img href="https://github.com/kag0330/strching/blob/main/View/index.png">
 - 
 - 
 - 
